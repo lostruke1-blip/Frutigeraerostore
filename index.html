@@ -1,307 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FrutigerAeroStore — Aqua Mouse | Wireless Liquid Mouse with Floating Clownfish</title>
+<meta name="description" content="The Aqua Mouse: a wireless mouse with real liquid and a floating clownfish inside. Bluetooth + 2.4G, RGB glow, USB-C. Frutiger Aero / Y2K aesthetic. Designed in Spain, shipped worldwide via Amazon." />
+<meta name="keywords" content="aqua mouse, frutiger aero, liquid mouse, clownfish mouse, y2k mouse, wireless aqua mouse, frutigeraerostore" />
+<meta property="og:title" content="FrutigerAeroStore — Aqua Mouse" />
+<meta property="og:description" content="Wireless mice with real liquid & a floating clownfish. The ultimate Frutiger Aero desk accessory." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Nunito',sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;width:100%}
 
-#fas,#fas *{box-sizing:border-box;margin:0;padding:0;font-family:'Nunito',sans-serif;-webkit-font-smoothing:antialiased}
-#fas{position:relative;overflow-x:hidden;width:100%}
-
-/* ============== HERO ============== */
-#fas-hero{position:relative;width:100%;min-height:100vh;background:linear-gradient(180deg,#4cb8ff 0%,#86d8ff 22%,#bff0ff 40%,#daf8e0 55%,#9fe070 68%,#5ec530 78%,#3ab820 88%);overflow:hidden;padding-bottom:60px}
-
-/* Sun */
-#fas-hero .sun{position:absolute;top:6%;right:8%;width:90px;height:90px;background:radial-gradient(circle,#fffce0 0%,#ffe88c 35%,rgba(255,220,80,0) 70%);border-radius:50%;z-index:1;animation:sunpulse 4s ease-in-out infinite}
+/* ============ HERO ============ */
+#hero{position:relative;width:100%;min-height:100vh;background:linear-gradient(180deg,#4cb8ff 0%,#86d8ff 22%,#bff0ff 40%,#daf8e0 55%,#9fe070 68%,#5ec530 78%,#3ab820 88%);overflow:hidden;padding-bottom:60px}
+.sun{position:absolute;top:6%;right:8%;width:90px;height:90px;background:radial-gradient(circle,#fffce0 0%,#ffe88c 35%,rgba(255,220,80,0) 70%);border-radius:50%;z-index:1;animation:sunpulse 4s ease-in-out infinite}
 @keyframes sunpulse{0%,100%{box-shadow:0 0 50px 25px rgba(255,235,100,0.45)}50%{box-shadow:0 0 80px 45px rgba(255,235,100,0.65)}}
-
-/* Clouds */
-#fas-hero .cloud{position:absolute;background:rgba(255,255,255,0.92);border-radius:60px;animation:cloudmv linear infinite;pointer-events:none;z-index:1;filter:blur(0.3px)}
-#fas-hero .cloud::before,#fas-hero .cloud::after{content:'';position:absolute;background:rgba(255,255,255,0.92);border-radius:50%}
-#fas-hero .cloud::before{width:60%;height:160%;top:-30%;left:15%}
-#fas-hero .cloud::after{width:45%;height:130%;top:-15%;right:10%}
-@keyframes cloudmv{0%{transform:translateX(-200px)}100%{transform:translateX(110vw)}}
-
-/* Sky shine rays */
-#fas-hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:60%;background:repeating-conic-gradient(from 0deg at 88% 8%,rgba(255,255,200,0.06) 0deg 5deg,transparent 5deg 12deg);z-index:1;pointer-events:none}
-
-/* Bubbles */
-#fas-hero .bub{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,0.95);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,0.98) 0%,rgba(180,240,255,0.4) 35%,rgba(140,220,255,0.15) 100%);animation:bubup linear infinite;pointer-events:none;z-index:3;box-shadow:0 0 15px rgba(255,255,255,0.4)}
+.cloud{position:absolute;background:rgba(255,255,255,0.92);border-radius:60px;animation:cloudmv linear infinite;pointer-events:none;z-index:1}
+.cloud::before,.cloud::after{content:'';position:absolute;background:rgba(255,255,255,0.92);border-radius:50%}
+.cloud::before{width:60%;height:160%;top:-30%;left:15%}
+.cloud::after{width:45%;height:130%;top:-15%;right:10%}
+@keyframes cloudmv{0%{transform:translateX(-220px)}100%{transform:translateX(112vw)}}
+#hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:60%;background:repeating-conic-gradient(from 0deg at 88% 8%,rgba(255,255,200,0.06) 0deg 5deg,transparent 5deg 12deg);z-index:1;pointer-events:none}
+.bub{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,0.95);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,0.98) 0%,rgba(180,240,255,0.4) 35%,rgba(140,220,255,0.15) 100%);animation:bubup linear infinite;pointer-events:none;z-index:3;box-shadow:0 0 15px rgba(255,255,255,0.4)}
 @keyframes bubup{0%{transform:translateY(0) translateX(0) scale(1);opacity:0.85}30%{transform:translateY(-30vh) translateX(20px) scale(1.08);opacity:1}70%{transform:translateY(-65vh) translateX(-15px) scale(0.95);opacity:0.6}100%{transform:translateY(-100vh) translateX(5px) scale(0.85);opacity:0}}
 
-/* NAV */
-#fas-nav{position:relative;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1.5px solid rgba(255,255,255,0.5)}
-#fas-nav .navlg{display:flex;align-items:center;gap:10px}
-#fas-nav .navlg img{width:46px;height:46px;border-radius:12px;border:2px solid rgba(255,255,255,0.9);object-fit:cover;box-shadow:0 4px 12px rgba(0,100,180,0.15)}
-#fas-nav .navbr{font-size:15px;font-weight:900;background:linear-gradient(135deg,#0066cc,#00b070);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;letter-spacing:-.3px}
-#fas-nav .navsb{font-size:9px;font-weight:700;color:#1a6a80;letter-spacing:.5px;margin-top:1px}
-#fas-nav .navlks{display:flex;gap:22px;list-style:none;align-items:center}
-#fas-nav .navlks a{font-size:12.5px;font-weight:800;color:#003355;text-decoration:none;transition:color .2s;text-shadow:0 1px 3px rgba(255,255,255,0.7)}
-#fas-nav .navlks a:hover{color:#0066aa}
-#fas-nav .navcta{background:linear-gradient(135deg,#00bcd4,#00c890)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;padding:9px 20px;border-radius:999px!important;font-size:12px!important;font-weight:800!important;text-shadow:none!important;box-shadow:0 4px 14px rgba(0,180,200,.3)!important}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 6vw;background:rgba(255,255,255,0.32);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1.5px solid rgba(255,255,255,0.5)}
+.navlg{display:flex;align-items:center;gap:10px;text-decoration:none}
+.navlg img{width:46px;height:46px;border-radius:12px;border:2px solid rgba(255,255,255,0.9);object-fit:cover;box-shadow:0 4px 12px rgba(0,100,180,0.15)}
+.navbr{font-size:15px;font-weight:900;background:linear-gradient(135deg,#0066cc,#00b070);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;letter-spacing:-.3px}
+.navsb{font-size:9px;font-weight:700;color:#1a6a80;letter-spacing:.5px;margin-top:1px}
+.navlks{display:flex;gap:22px;list-style:none;align-items:center}
+.navlks a{font-size:12.5px;font-weight:800;color:#003355;text-decoration:none;transition:color .2s;text-shadow:0 1px 3px rgba(255,255,255,0.7)}
+.navlks a:hover{color:#0066aa}
+.navcta{background:linear-gradient(135deg,#00bcd4,#00c890)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;padding:9px 20px;border-radius:999px!important;text-shadow:none!important;box-shadow:0 4px 14px rgba(0,180,200,.3)!important}
 
-/* HERO content */
-#fas-hcont{position:relative;z-index:10;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:60px 6vw 30px;max-width:1200px;margin:0 auto}
-#fas-hcont .badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.75);border:1.5px solid rgba(0,200,220,0.5);color:#00667a;font-size:10.5px;font-weight:800;padding:6px 16px;border-radius:999px;margin-bottom:18px;letter-spacing:.9px;text-transform:uppercase;box-shadow:0 4px 12px rgba(0,150,180,.12);backdrop-filter:blur(8px)}
-#fas-hcont .badge::before{content:'';width:7px;height:7px;border-radius:50%;background:#00ccaa;display:inline-block;box-shadow:0 0 8px #00ccaa}
-#fas-hcont h1{font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.05;color:#002244;margin-bottom:18px;letter-spacing:-1.8px;text-shadow:0 2px 12px rgba(255,255,255,0.7)}
-#fas-hcont h1 em{font-style:normal;background:linear-gradient(135deg,#006fb8,#00b4a0,#0099cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-#fas-hcont .hsub{font-size:15px;line-height:1.65;color:#1a4455;margin-bottom:30px;max-width:460px;text-shadow:0 1px 3px rgba(255,255,255,0.7)}
-#fas-hcont .hbtns{display:flex;gap:12px;flex-wrap:wrap}
-#fas-hcont .bp{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff;border:none;padding:14px 28px;border-radius:999px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 6px 22px rgba(0,180,200,.4);transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif}
-#fas-hcont .bp:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,180,200,.55)}
-#fas-hcont .bg2{background:rgba(255,255,255,0.7);color:#005577;border:1.5px solid rgba(255,255,255,0.95);padding:14px 26px;border-radius:999px;font-size:14px;font-weight:800;cursor:pointer;backdrop-filter:blur(12px);text-decoration:none;display:inline-block;transition:background .2s;font-family:'Nunito',sans-serif}
-#fas-hcont .bg2:hover{background:rgba(255,255,255,0.95)}
+#hcont{position:relative;z-index:10;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:50px 6vw 30px;max-width:1200px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.75);border:1.5px solid rgba(0,200,220,0.5);color:#00667a;font-size:10.5px;font-weight:800;padding:6px 16px;border-radius:999px;margin-bottom:18px;letter-spacing:.9px;text-transform:uppercase;box-shadow:0 4px 12px rgba(0,150,180,.12);backdrop-filter:blur(8px)}
+.badge::before{content:'';width:7px;height:7px;border-radius:50%;background:#00ccaa;display:inline-block;box-shadow:0 0 8px #00ccaa}
+#hcont h1{font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.05;color:#002244;margin-bottom:18px;letter-spacing:-1.8px;text-shadow:0 2px 12px rgba(255,255,255,0.7)}
+#hcont h1 em{font-style:normal;background:linear-gradient(135deg,#006fb8,#00b4a0,#0099cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hsub{font-size:15px;line-height:1.65;color:#1a4455;margin-bottom:30px;max-width:460px;text-shadow:0 1px 3px rgba(255,255,255,0.7)}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap}
+.bp{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff;border:none;padding:14px 28px;border-radius:999px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 6px 22px rgba(0,180,200,.4);transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.bp:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,180,200,.55)}
+.bg2{background:rgba(255,255,255,0.7);color:#005577;border:1.5px solid rgba(255,255,255,0.95);padding:14px 26px;border-radius:999px;font-size:14px;font-weight:800;cursor:pointer;backdrop-filter:blur(12px);text-decoration:none;display:inline-block;transition:background .2s}
+.bg2:hover{background:rgba(255,255,255,0.95)}
 
-/* 3D stage */
-#fas-stage{position:relative;display:flex;justify-content:center;align-items:center;height:480px}
-#fas-stage .ring{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(0,220,255,0.22) 0%,rgba(80,200,255,0.12) 45%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:ringpls 4s ease-in-out infinite;z-index:1;filter:blur(8px)}
+/* 3D Stage */
+#stage{position:relative;display:flex;justify-content:center;align-items:center;height:500px}
+.ring{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(0,220,255,0.22) 0%,rgba(80,200,255,0.12) 45%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:ringpls 4s ease-in-out infinite;z-index:1;filter:blur(8px)}
 @keyframes ringpls{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.18)}}
-#fas-stage .ring2{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,255,180,0.18),transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);animation:ringpls 5s ease-in-out infinite reverse;z-index:1;filter:blur(6px)}
-#fas-mouse3d{position:relative;z-index:5;width:320px;height:320px;transform-style:preserve-3d;perspective:1200px;cursor:grab}
-#fas-mouse3d:active{cursor:grabbing}
-#fas-mouse3d .mwrap{width:100%;height:100%;transform-style:preserve-3d;transition:transform .15s ease-out;display:flex;align-items:center;justify-content:center}
-#fas-mouse3d img{max-width:300px;max-height:300px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 25px 50px rgba(0,80,120,0.35)) drop-shadow(0 0 30px rgba(100,220,255,0.4));animation:floatm 4s ease-in-out infinite}
-@keyframes floatm{0%,100%{transform:translateY(0) rotateZ(-2deg)}50%{transform:translateY(-15px) rotateZ(2deg)}}
-#fas-stage .ft{position:absolute;background:rgba(255,255,255,0.9);border:1.5px solid rgba(0,200,180,0.5);border-radius:14px;padding:8px 14px;font-size:11px;font-weight:800;color:#006677;backdrop-filter:blur(10px);white-space:nowrap;animation:ftfl 4s ease-in-out infinite;z-index:6;box-shadow:0 4px 14px rgba(0,150,180,.15)}
+.ring2{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,255,180,0.18),transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);animation:ringpls 5s ease-in-out infinite reverse;z-index:1;filter:blur(6px)}
+#canvas3d{position:relative;z-index:5;width:100%;height:100%;cursor:grab;touch-action:none}
+#canvas3d:active{cursor:grabbing}
+#loader3d{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;text-align:center;color:#005577}
+#loader3d .spin{width:40px;height:40px;border:3px solid rgba(0,180,200,0.2);border-top-color:#00bcd4;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px}
+@keyframes spin{to{transform:rotate(360deg)}}
+#loader3d .ltxt{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.ft{position:absolute;background:rgba(255,255,255,0.9);border:1.5px solid rgba(0,200,180,0.5);border-radius:14px;padding:8px 14px;font-size:11px;font-weight:800;color:#006677;backdrop-filter:blur(10px);white-space:nowrap;animation:ftfl 4s ease-in-out infinite;z-index:7;box-shadow:0 4px 14px rgba(0,150,180,.15);pointer-events:none}
 @keyframes ftfl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-#fas-stage .ft1{top:8%;right:5%;animation-delay:0s}
-#fas-stage .ft2{bottom:18%;left:0;animation-delay:1.6s}
-#fas-stage .ft3{top:42%;left:-3%;animation-delay:.9s}
-#fas-stage .ft4{top:18%;left:8%;animation-delay:2.3s}
-
-/* product mini info under 3d */
-#fas-pmini{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.9);border-radius:18px;padding:12px 20px;text-align:center;box-shadow:0 8px 24px rgba(0,140,200,.18);min-width:220px;z-index:7}
-#fas-pmini .pn{font-size:13px;font-weight:900;color:#002244;margin-bottom:2px}
-#fas-pmini .pp{font-size:14px;font-weight:900;color:#0099aa;display:flex;align-items:center;justify-content:center;gap:6px}
-#fas-pmini .pp s{font-size:11px;font-weight:500;color:#888;text-decoration:line-through}
-
-#fas-scrh{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:700;color:rgba(0,80,100,0.55);letter-spacing:1.5px;text-transform:uppercase;animation:blnk 2.5s ease-in-out infinite;z-index:10}
+.ft1{top:6%;right:4%;animation-delay:0s}
+.ft2{bottom:20%;left:-2%;animation-delay:1.6s}
+.ft3{top:40%;left:-4%;animation-delay:.9s}
+.ft4{top:14%;left:6%;animation-delay:2.3s}
+#pmini{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.9);border-radius:18px;padding:12px 22px;text-align:center;box-shadow:0 8px 24px rgba(0,140,200,.18);min-width:230px;z-index:8}
+#pmini .pn{font-size:13px;font-weight:900;color:#002244;margin-bottom:2px}
+#pmini .pp{font-size:14px;font-weight:900;color:#0099aa;display:flex;align-items:center;justify-content:center;gap:6px}
+#pmini .pp s{font-size:11px;font-weight:500;color:#888;text-decoration:line-through}
+#draghint{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;color:rgba(0,90,110,0.6);letter-spacing:.5px;z-index:8;white-space:nowrap}
+#scrh{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:700;color:rgba(0,80,100,0.55);letter-spacing:1.5px;text-transform:uppercase;animation:blnk 2.5s ease-in-out infinite;z-index:10}
 @keyframes blnk{0%,100%{opacity:.5}50%{opacity:1}}
 
 /* TICKER */
-#fas-tick{position:relative;z-index:5;padding:14px 0;overflow:hidden;background:rgba(255,255,255,0.32);backdrop-filter:blur(10px);border-top:1.5px solid rgba(255,255,255,0.7);border-bottom:1.5px solid rgba(255,255,255,0.7)}
-#fas-tick .trk{display:flex;gap:38px;white-space:nowrap;animation:tkrun 22s linear infinite;width:max-content;padding:0 20px}
+#tick{position:relative;z-index:5;padding:14px 0;overflow:hidden;background:rgba(255,255,255,0.32);backdrop-filter:blur(10px);border-top:1.5px solid rgba(255,255,255,0.7);border-bottom:1.5px solid rgba(255,255,255,0.7)}
+.trk{display:flex;gap:38px;white-space:nowrap;animation:tkrun 22s linear infinite;width:max-content;padding:0 20px}
 @keyframes tkrun{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-#fas-tick .ti{font-size:12px;font-weight:800;color:#004466;display:flex;align-items:center;gap:8px}
-#fas-tick .td{width:5px;height:5px;border-radius:50%;background:#00bb88;display:inline-block;box-shadow:0 0 6px #00bb88}
+.ti{font-size:12px;font-weight:800;color:#004466;display:flex;align-items:center;gap:8px}
+.tdd{width:5px;height:5px;border-radius:50%;background:#00bb88;display:inline-block;box-shadow:0 0 6px #00bb88}
 
-/* Rest of site */
-#fas-rest{position:relative;background:linear-gradient(180deg,#bff0ff 0%,#daf8e0 8%,#9fe070 22%,#5ec530 38%,#3ab820 60%,#2a9018 80%,#1d7510 100%);overflow:hidden}
-#fas-rest .bub2{position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,0.85);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,0.95) 0%,rgba(180,240,255,0.3) 40%,rgba(100,210,255,0.1) 100%);animation:bub2anim linear infinite;pointer-events:none}
+/* REST */
+#rest{position:relative;background:linear-gradient(180deg,#bff0ff 0%,#daf8e0 8%,#9fe070 22%,#5ec530 38%,#3ab820 60%,#2a9018 80%,#1d7510 100%);overflow:hidden}
+.bub2{position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,0.85);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,0.95) 0%,rgba(180,240,255,0.3) 40%,rgba(100,210,255,0.1) 100%);animation:bub2anim linear infinite;pointer-events:none}
 @keyframes bub2anim{0%{transform:translateY(0) scale(1);opacity:.7}50%{transform:translateY(-45px) translateX(8px) scale(1.06);opacity:.9}100%{transform:translateY(-95px) translateX(-4px) scale(.9);opacity:.4}}
-#fas section{position:relative;z-index:5;padding:60px 6vw;max-width:1200px;margin:0 auto}
-#fas .ey{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#006650;margin-bottom:7px;text-align:center;text-shadow:0 1px 4px rgba(255,255,255,0.8)}
-#fas h2{font-size:30px;font-weight:900;color:#002233;letter-spacing:-.8px;line-height:1.2;text-align:center;margin-bottom:34px;text-shadow:0 2px 8px rgba(255,255,255,0.65)}
+section{position:relative;z-index:5;padding:60px 6vw;max-width:1200px;margin:0 auto}
+.ey{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#006650;margin-bottom:7px;text-align:center;text-shadow:0 1px 4px rgba(255,255,255,0.8)}
+h2{font-size:30px;font-weight:900;color:#002233;letter-spacing:-.8px;line-height:1.2;text-align:center;margin-bottom:34px;text-shadow:0 2px 8px rgba(255,255,255,0.65)}
 
-/* PRODUCTS */
-#fas .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-#fas .pcard{background:rgba(255,255,255,0.7);backdrop-filter:blur(16px);border:1.5px solid rgba(255,255,255,0.95);border-radius:24px;overflow:hidden;transition:all .25s;box-shadow:0 6px 22px rgba(0,140,200,.1)}
-#fas .pcard:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,140,200,.22)}
-#fas .pi{height:210px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-#fas .pi img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .35s;padding:18px}
-#fas .pcard:hover .pi img{transform:scale(1.08) rotate(-3deg)}
-#fas .pb{padding:18px 20px 20px}
-#fas .ptag{display:inline-block;background:linear-gradient(135deg,rgba(0,195,175,.18),rgba(0,200,200,.13));color:#006655;font-size:9px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px;border:1px solid rgba(0,175,155,.3)}
-#fas .pname{font-size:15.5px;font-weight:900;color:#002233;margin-bottom:6px;line-height:1.2}
-#fas .pdesc{font-size:11.5px;color:#335566;line-height:1.55;margin-bottom:14px}
-#fas .pfooter{display:flex;align-items:center;justify-content:space-between}
-#fas .pbuy{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff;border:none;padding:9px 18px;border-radius:999px;font-size:11.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 3px 10px rgba(0,180,200,.3);transition:transform .15s;font-family:'Nunito',sans-serif}
-#fas .pbuy:hover{transform:scale(1.05)}
-#fas .pstars{font-size:11.5px;color:#ffaa00;font-weight:700;letter-spacing:1px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{background:rgba(255,255,255,0.7);backdrop-filter:blur(16px);border:1.5px solid rgba(255,255,255,0.95);border-radius:24px;overflow:hidden;transition:all .25s;box-shadow:0 6px 22px rgba(0,140,200,.1)}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,140,200,.22)}
+.pi{height:210px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pi img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .35s;padding:18px}
+.pcard:hover .pi img{transform:scale(1.08) rotate(-3deg)}
+.pb{padding:18px 20px 20px}
+.ptag{display:inline-block;background:linear-gradient(135deg,rgba(0,195,175,.18),rgba(0,200,200,.13));color:#006655;font-size:9px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px;border:1px solid rgba(0,175,155,.3)}
+.pname{font-size:15.5px;font-weight:900;color:#002233;margin-bottom:6px;line-height:1.2}
+.pdesc{font-size:11.5px;color:#335566;line-height:1.55;margin-bottom:14px}
+.pfooter{display:flex;align-items:center;justify-content:space-between}
+.pbuy{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff;border:none;padding:9px 18px;border-radius:999px;font-size:11.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 3px 10px rgba(0,180,200,.3);transition:transform .15s}
+.pbuy:hover{transform:scale(1.05)}
+.pstars{font-size:11.5px;color:#ffaa00;font-weight:700;letter-spacing:1px}
 
-/* FEATURES */
-#fas .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-#fas .fcard{background:rgba(255,255,255,0.65);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.95);border-radius:20px;padding:24px 20px;transition:transform .2s}
-#fas .fcard:hover{transform:translateY(-3px)}
-#fas .ficon{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(220,250,255,0.8));border:1.5px solid rgba(0,195,215,.35);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:22px;box-shadow:0 3px 10px rgba(0,150,200,.12)}
-#fas .ftitle{font-size:14.5px;font-weight:900;color:#002233;margin-bottom:6px}
-#fas .fdesc{font-size:11.5px;color:#335566;line-height:1.6}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fcard{background:rgba(255,255,255,0.65);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.95);border-radius:20px;padding:24px 20px;transition:transform .2s}
+.fcard:hover{transform:translateY(-3px)}
+.ficon{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(220,250,255,0.8));border:1.5px solid rgba(0,195,215,.35);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:22px;box-shadow:0 3px 10px rgba(0,150,200,.12)}
+.ftitle{font-size:14.5px;font-weight:900;color:#002233;margin-bottom:6px}
+.fdesc{font-size:11.5px;color:#335566;line-height:1.6}
 
-/* HALL OF FAME */
-#fas .hofg{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-#fas .hofc{background:rgba(255,255,255,0.72);backdrop-filter:blur(16px);border:2px solid rgba(255,255,255,0.95);border-radius:24px;overflow:hidden;transition:all .25s;display:flex;flex-direction:row;box-shadow:0 6px 22px rgba(0,120,180,.1)}
-#fas .hofc:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,140,200,.2)}
-#fas .hofi{width:160px;min-width:160px;height:220px;object-fit:cover;object-position:center;display:block;flex-shrink:0}
-#fas .hofb{padding:20px 18px;flex:1;overflow:hidden}
-#fas .hofs{display:inline-flex;align-items:center;gap:5px;background:rgba(255,80,80,.1);color:#aa3333;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:10px;border:1px solid rgba(200,80,80,.2)}
-#fas .hofn{font-size:16px;font-weight:900;color:#002233;margin-bottom:4px;line-height:1.2}
-#fas .hofy{font-size:11px;font-weight:800;color:#0099aa;margin-bottom:10px}
-#fas .hofst{font-size:11.5px;color:#335566;line-height:1.7}
-#fas .hoft{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
-#fas .hoftag{background:rgba(0,180,200,.12);color:#006677;font-size:9px;font-weight:800;padding:3px 9px;border-radius:999px;border:1px solid rgba(0,170,190,.28)}
+.hofg{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.hofc{background:rgba(255,255,255,0.72);backdrop-filter:blur(16px);border:2px solid rgba(255,255,255,0.95);border-radius:24px;overflow:hidden;transition:all .25s;display:flex;flex-direction:row;box-shadow:0 6px 22px rgba(0,120,180,.1)}
+.hofc:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,140,200,.2)}
+.hofi{width:160px;min-width:160px;height:220px;object-fit:cover;object-position:center;display:block;flex-shrink:0}
+.hofb{padding:20px 18px;flex:1;overflow:hidden}
+.hofs{display:inline-flex;align-items:center;gap:5px;background:rgba(255,80,80,.1);color:#aa3333;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:10px;border:1px solid rgba(200,80,80,.2)}
+.hofn{font-size:16px;font-weight:900;color:#002233;margin-bottom:4px;line-height:1.2}
+.hofy{font-size:11px;font-weight:800;color:#0099aa;margin-bottom:10px}
+.hofst{font-size:11.5px;color:#335566;line-height:1.7}
+.hoft{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.hoftag{background:rgba(0,180,200,.12);color:#006677;font-size:9px;font-weight:800;padding:3px 9px;border-radius:999px;border:1px solid rgba(0,170,190,.28)}
 
-/* GALLERY */
-#fas .galt{display:flex;justify-content:center;gap:10px;margin-bottom:26px;flex-wrap:wrap}
-#fas .gtb{background:rgba(255,255,255,0.7);border:1.5px solid rgba(255,255,255,0.95);color:#004455;font-size:11.5px;font-weight:800;padding:9px 20px;border-radius:999px;cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif;backdrop-filter:blur(8px)}
-#fas .gtb.act{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(0,180,200,.35)}
-#fas .ggr{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-#fas .gc{background:rgba(255,255,255,0.68);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.95);border-radius:20px;overflow:hidden;transition:transform .2s}
-#fas .gc:hover{transform:scale(1.03)}
-#fas .gc img{width:100%;height:160px;object-fit:cover;object-position:center;display:block}
-#fas .gcb{padding:12px 15px 14px}
-#fas .gct{font-size:12px;font-weight:900;color:#002233;margin-bottom:4px}
-#fas .gcs{font-size:10px;color:#4a8899;line-height:1.5}
+.galt{display:flex;justify-content:center;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.gtb{background:rgba(255,255,255,0.7);border:1.5px solid rgba(255,255,255,0.95);color:#004455;font-size:11.5px;font-weight:800;padding:9px 20px;border-radius:999px;cursor:pointer;transition:all .2s;backdrop-filter:blur(8px)}
+.gtb.act{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(0,180,200,.35)}
+.ggr{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gc{background:rgba(255,255,255,0.68);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.95);border-radius:20px;overflow:hidden;transition:transform .2s}
+.gc:hover{transform:scale(1.03)}
+.gc img{width:100%;height:160px;object-fit:cover;object-position:center;display:block}
+.gcb{padding:12px 15px 14px}
+.gct{font-size:12px;font-weight:900;color:#002233;margin-bottom:4px}
+.gcs{font-size:10px;color:#4a8899;line-height:1.5}
 
-/* REVIEWS */
-#fas .rgr{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-#fas .rcd{background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.95);border-radius:20px;padding:20px}
-#fas .rst{font-size:13px;color:#ffaa00;margin-bottom:9px;letter-spacing:2px}
-#fas .rtx{font-size:12px;color:#224455;line-height:1.6;margin-bottom:13px;font-style:italic}
-#fas .rau{display:flex;align-items:center;gap:9px}
-#fas .rav{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0}
-#fas .rn{font-size:11.5px;font-weight:800;color:#002233}
-#fas .rh{font-size:10px;color:#6aacbb}
+.rgr{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcd{background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,0.95);border-radius:20px;padding:20px}
+.rst{font-size:13px;color:#ffaa00;margin-bottom:9px;letter-spacing:2px}
+.rtx{font-size:12px;color:#224455;line-height:1.6;margin-bottom:13px;font-style:italic}
+.rau{display:flex;align-items:center;gap:9px}
+.rav{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0}
+.rn{font-size:11.5px;font-weight:800;color:#002233}
+.rh{font-size:10px;color:#6aacbb}
 
-/* CTA */
-#fas .ctas{position:relative;z-index:5;margin:0 6vw 40px;border-radius:28px;background:linear-gradient(135deg,#00c8e8 0%,#00d8aa 50%,#44c8ff 100%);padding:54px 56px;text-align:center;overflow:hidden;box-shadow:0 18px 54px rgba(0,175,215,.32)}
-#fas .ctas::before{content:'';position:absolute;top:-55px;right:-55px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.15)}
-#fas .ctas::after{content:'';position:absolute;bottom:-70px;left:-35px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.1)}
-#fas .ctt{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.9px;margin-bottom:10px;position:relative;z-index:1;text-shadow:0 2px 10px rgba(0,80,100,.2)}
-#fas .ctsb{font-size:14.5px;color:rgba(255,255,255,.92);margin-bottom:26px;position:relative;z-index:1}
-#fas .ctbs{display:flex;gap:11px;justify-content:center;position:relative;z-index:1;flex-wrap:wrap}
-#fas .bw{background:#fff;color:#007799;border:none;padding:13px 28px;border-radius:999px;font-size:13.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .15s;font-family:'Nunito',sans-serif}
-#fas .bw:hover{transform:translateY(-2px)}
-#fas .bow{background:rgba(255,255,255,.22);color:#fff;border:2px solid rgba(255,255,255,.75);padding:13px 28px;border-radius:999px;font-size:13.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;backdrop-filter:blur(8px);font-family:'Nunito',sans-serif}
+.ctas{position:relative;z-index:5;margin:0 6vw 40px;border-radius:28px;background:linear-gradient(135deg,#00c8e8 0%,#00d8aa 50%,#44c8ff 100%);padding:54px 56px;text-align:center;overflow:hidden;box-shadow:0 18px 54px rgba(0,175,215,.32)}
+.ctas::before{content:'';position:absolute;top:-55px;right:-55px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.15)}
+.ctas::after{content:'';position:absolute;bottom:-70px;left:-35px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.1)}
+.ctt{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.9px;margin-bottom:10px;position:relative;z-index:1;text-shadow:0 2px 10px rgba(0,80,100,.2)}
+.ctsb{font-size:14.5px;color:rgba(255,255,255,.92);margin-bottom:26px;position:relative;z-index:1}
+.ctbs{display:flex;gap:11px;justify-content:center;position:relative;z-index:1;flex-wrap:wrap}
+.bw{background:#fff;color:#007799;border:none;padding:13px 28px;border-radius:999px;font-size:13.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .15s}
+.bw:hover{transform:translateY(-2px)}
+.bow{background:rgba(255,255,255,.22);color:#fff;border:2px solid rgba(255,255,255,.75);padding:13px 28px;border-radius:999px;font-size:13.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;backdrop-filter:blur(8px)}
 
-/* FOOTER */
-#fas ft{display:block;position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:blur(12px);padding:38px 6vw}
-#fas .fti{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:38px}
-#fas .ftb{font-size:17px;font-weight:900;background:linear-gradient(135deg,#44ddff,#44ffcc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:9px}
-#fas .ftg{font-size:11.5px;line-height:1.65;color:#4d8899}
-#fas .ftct{font-size:10px;font-weight:800;color:#aaddee;letter-spacing:.9px;text-transform:uppercase;margin-bottom:13px}
-#fas .ftlk{list-style:none}
-#fas .ftlk li{margin-bottom:8px}
-#fas .ftlk a{font-size:12px;color:#4d8899;text-decoration:none;font-weight:600}
-#fas .ftlk a:hover{color:#88ddee}
-#fas .ftbt{max-width:1200px;margin:22px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:11px}
-#fas .ftcp{font-size:11px;color:#2d6677}
-#fas .ftsl{display:flex;gap:10px}
-#fas .fts{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#3d8899;text-decoration:none}
-#fas .fts:hover{background:rgba(0,200,220,.2);color:#44ddee}
+footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:blur(12px);padding:38px 6vw}
+.fti{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:38px}
+.ftb{font-size:17px;font-weight:900;background:linear-gradient(135deg,#44ddff,#44ffcc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:9px}
+.ftg{font-size:11.5px;line-height:1.65;color:#4d8899}
+.ftct{font-size:10px;font-weight:800;color:#aaddee;letter-spacing:.9px;text-transform:uppercase;margin-bottom:13px}
+.ftlk{list-style:none}
+.ftlk li{margin-bottom:8px}
+.ftlk a{font-size:12px;color:#4d8899;text-decoration:none;font-weight:600;cursor:pointer}
+.ftlk a:hover{color:#88ddee}
+.ftbt{max-width:1200px;margin:22px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:11px}
+.ftcp{font-size:11px;color:#2d6677}
+.ftsl{display:flex;gap:10px}
+.fts{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#3d8899;text-decoration:none}
+.fts:hover{background:rgba(0,200,220,.2);color:#44ddee}
+.ftdisc{max-width:1200px;margin:14px auto 0;font-size:10px;color:#1f5566;line-height:1.6;text-align:center}
 
-/* ============ RESPONSIVE - MOBILE FIRST ============ */
+/* Cookie banner */
+#cookie{position:fixed;bottom:16px;left:16px;right:16px;max-width:480px;margin:0 auto;background:rgba(255,255,255,0.96);backdrop-filter:blur(18px);border:1.5px solid rgba(0,180,200,0.3);border-radius:20px;padding:18px 20px;z-index:9999;box-shadow:0 12px 40px rgba(0,80,120,0.2);display:flex;flex-direction:column;gap:12px}
+#cookie.hide{display:none}
+#cookie p{font-size:12px;color:#224455;line-height:1.55}
+#cookie a{color:#0099aa;font-weight:700;text-decoration:underline;cursor:pointer}
+#cookie .cbtns{display:flex;gap:8px}
+#cookie button{flex:1;border:none;border-radius:999px;padding:10px;font-size:12px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif}
+#cookie .cacc{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff}
+#cookie .cdec{background:rgba(0,80,100,0.08);color:#005566}
+
+/* Legal modal */
+#modal{position:fixed;inset:0;z-index:10000;background:rgba(0,20,35,0.7);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+#modal.show{display:flex}
+.modbox{background:#fff;border-radius:24px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;padding:32px 30px;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.modbox h3{font-size:22px;font-weight:900;color:#002233;margin-bottom:16px;letter-spacing:-.5px}
+.modbox h4{font-size:14px;font-weight:800;color:#005577;margin:18px 0 6px}
+.modbox p{font-size:12.5px;color:#445566;line-height:1.7;margin-bottom:8px}
+.modclose{float:right;background:rgba(0,80,100,0.08);border:none;width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer;color:#005566;font-weight:800}
+
 @media(max-width:900px){
-  #fas-hcont{grid-template-columns:1fr;text-align:center;gap:30px;padding:40px 5vw 20px}
-  #fas-hcont h1{font-size:32px}
-  #fas-hcont .hsub{margin-left:auto;margin-right:auto}
-  #fas-hcont .hbtns{justify-content:center}
-  #fas-stage{height:380px}
-  #fas-mouse3d{width:260px;height:260px}
-  #fas-mouse3d img{max-width:240px;max-height:240px}
-  #fas-stage .ring{width:300px;height:300px}
-  #fas-stage .ring2{width:240px;height:240px}
+  #hcont{grid-template-columns:1fr;text-align:center;gap:24px;padding:36px 5vw 16px}
+  #hcont h1{font-size:32px}
+  .hsub{margin-left:auto;margin-right:auto}
+  .hbtns{justify-content:center}
+  #stage{height:380px}
+  .ring{width:300px;height:300px}.ring2{width:240px;height:240px}
 }
 @media(max-width:768px){
-  #fas-nav{padding:14px 5vw}
-  #fas-nav .navlks{gap:10px}
-  #fas-nav .navlks li:not(:last-child){display:none}
-  #fas-nav .navbr{font-size:13px}
-  #fas-nav .navsb{font-size:8.5px}
-  #fas-nav .navlg img{width:40px;height:40px}
-  #fas-hcont{padding:32px 5vw 16px}
-  #fas-hcont h1{font-size:28px;letter-spacing:-1.2px}
-  #fas-hcont .hsub{font-size:13.5px;margin-bottom:24px}
-  #fas-hcont .bp,#fas-hcont .bg2{padding:12px 22px;font-size:13px}
-  #fas-stage{height:330px}
-  #fas-mouse3d{width:220px;height:220px}
-  #fas-mouse3d img{max-width:200px;max-height:200px}
-  #fas-stage .ring{width:260px;height:260px}
-  #fas-stage .ring2{width:200px;height:200px}
-  #fas-stage .ft{font-size:10px;padding:6px 11px}
-  #fas-stage .ft1{top:5%;right:2%}
-  #fas-stage .ft2{bottom:15%;left:0}
-  #fas-stage .ft3{top:40%;left:0}
-  #fas-stage .ft4{top:15%;left:5%}
-  #fas-pmini{min-width:200px;padding:10px 18px}
-  #fas-pmini .pn{font-size:12px}
-  #fas-pmini .pp{font-size:13px}
-  #fas section{padding:42px 5vw}
-  #fas h2{font-size:23px;letter-spacing:-.5px;margin-bottom:24px}
-  #fas .pgrid{grid-template-columns:1fr;gap:14px}
-  #fas .pi{height:230px}
-  #fas .fgrid{grid-template-columns:1fr 1fr;gap:10px}
-  #fas .fcard{padding:18px 14px}
-  #fas .ficon{width:38px;height:38px;font-size:18px}
-  #fas .ftitle{font-size:12.5px}
-  #fas .fdesc{font-size:10.5px}
-  #fas .hofg{grid-template-columns:1fr;gap:16px}
-  #fas .hofc{flex-direction:column}
-  #fas .hofi{width:100%;min-width:unset;height:220px}
-  #fas .ggr{grid-template-columns:1fr 1fr;gap:10px}
-  #fas .gc img{height:130px}
-  #fas .rgr{grid-template-columns:1fr;gap:12px}
-  #fas .ctas{margin:0 16px 32px;padding:38px 24px}
-  #fas .ctt{font-size:24px}
-  #fas .ctsb{font-size:13px}
-  #fas ft{padding:30px 5vw}
-  #fas .fti{grid-template-columns:1fr;gap:24px}
-  #fas .ftbt{flex-direction:column;text-align:center}
+  nav{padding:14px 5vw}
+  .navlks li:not(:last-child){display:none}
+  .navbr{font-size:13px}.navsb{font-size:8.5px}.navlg img{width:40px;height:40px}
+  #hcont h1{font-size:28px;letter-spacing:-1.2px}
+  .hsub{font-size:13.5px}
+  #stage{height:340px}
+  .ring{width:260px;height:260px}.ring2{width:200px;height:200px}
+  .ft{font-size:10px;padding:6px 11px}
+  .ft1{top:4%;right:1%}.ft2{bottom:16%;left:0}.ft3{top:38%;left:0}.ft4{top:12%;left:4%}
+  #pmini{min-width:200px;padding:10px 18px}
+  section{padding:42px 5vw}
+  h2{font-size:23px;margin-bottom:24px}
+  .pgrid{grid-template-columns:1fr;gap:14px}.pi{height:230px}
+  .fgrid{grid-template-columns:1fr 1fr;gap:10px}
+  .fcard{padding:18px 14px}.ficon{width:38px;height:38px;font-size:18px}
+  .ftitle{font-size:12.5px}.fdesc{font-size:10.5px}
+  .hofg{grid-template-columns:1fr;gap:16px}.hofc{flex-direction:column}
+  .hofi{width:100%;min-width:unset;height:220px}
+  .ggr{grid-template-columns:1fr 1fr;gap:10px}.gc img{height:130px}
+  .rgr{grid-template-columns:1fr;gap:12px}
+  .ctas{margin:0 16px 32px;padding:38px 24px}.ctt{font-size:24px}.ctsb{font-size:13px}
+  footer{padding:30px 5vw}.fti{grid-template-columns:1fr;gap:24px}
+  .ftbt{flex-direction:column;text-align:center}
 }
 @media(max-width:480px){
-  #fas-nav .navlks{display:none}
-  #fas-nav .navlks li:last-child{display:block}
-  #fas-hcont h1{font-size:24px}
-  #fas-hcont .hbtns{flex-direction:column;width:100%}
-  #fas-hcont .bp,#fas-hcont .bg2{width:100%;justify-content:center;text-align:center}
-  #fas-stage{height:300px}
-  #fas-mouse3d{width:190px;height:190px}
-  #fas-mouse3d img{max-width:175px;max-height:175px}
-  #fas-stage .ring{width:220px;height:220px}
-  #fas-stage .ring2{width:170px;height:170px}
-  #fas .fgrid{grid-template-columns:1fr}
-  #fas .ggr{grid-template-columns:1fr}
+  .navlks{display:none}.navlks li:last-child{display:block}
+  #hcont h1{font-size:24px}
+  .hbtns{flex-direction:column;width:100%}
+  .bp,.bg2{width:100%;justify-content:center;text-align:center}
+  #stage{height:300px}
+  .ring{width:220px;height:220px}.ring2{width:170px;height:170px}
+  .fgrid{grid-template-columns:1fr}.ggr{grid-template-columns:1fr}
 }
 </style>
+</head>
+<body>
 
-<div id="fas">
-
-<!-- ============ HERO ============ -->
-<section id="fas-hero">
+<section id="hero">
   <div class="sun"></div>
   <div class="cloud" style="width:120px;height:24px;top:7%;left:-150px;animation-duration:32s;animation-delay:0s;opacity:.95"></div>
   <div class="cloud" style="width:90px;height:20px;top:13%;left:-110px;animation-duration:26s;animation-delay:6s;opacity:.85"></div>
   <div class="cloud" style="width:150px;height:30px;top:4%;left:-200px;animation-duration:40s;animation-delay:12s;opacity:.9"></div>
   <div class="cloud" style="width:80px;height:18px;top:22%;left:-100px;animation-duration:28s;animation-delay:18s;opacity:.8"></div>
 
-  <nav id="fas-nav">
-    <div class="navlg">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/Yyv922oLjJu31o3o/photo_2026-04-03_15-11-05-2-NHvrc9wAeA6ZZNQE.jpg" alt="FrutigerAeroStore" />
+  <nav>
+    <a class="navlg" href="#hero">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/Yyv922oLjJu31o3o/photo_2026-04-03_15-11-05-2-NHvrc9wAeA6ZZNQE.jpg" alt="FrutigerAeroStore logo" />
       <div>
         <div class="navbr">FrutigerAeroStore</div>
         <div class="navsb">Aqua Mouse · Y2K Aesthetic</div>
       </div>
-    </div>
+    </a>
     <ul class="navlks">
-      <li><a href="#fas-products">Shop</a></li>
-      <li><a href="#fas-hof">Hall of Fame</a></li>
-      <li><a href="#fas-gallery">Gallery</a></li>
-      <li><a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" class="navcta">Buy Now</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#hof">Hall of Fame</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="navcta">Buy Now</a></li>
     </ul>
   </nav>
 
-  <div id="fas-hcont">
+  <div id="hcont">
     <div>
       <div class="badge">Frutiger Aero · Y2K Revival · Designed in Spain</div>
       <h1>The <em>Aqua Mouse</em> bringing 2006 to your desk</h1>
-      <p class="hsub">Wireless mice with real liquid &amp; floating clownfish. Bluetooth + 2.4G dual mode. RGB lighting. For people who miss Windows Vista — and aren't ashamed of it.</p>
+      <p class="hsub">Wireless mice with real liquid &amp; a floating clownfish. Bluetooth + 2.4G dual mode. RGB lighting. For people who miss Windows Vista — and aren't ashamed of it.</p>
       <div class="hbtns">
-        <a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" class="bp">Shop on Amazon ↗</a>
-        <a href="#fas-hof" class="bg2">Hall of Fame</a>
+        <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="bp">Shop on Amazon ↗</a>
+        <a href="#hof" class="bg2">Hall of Fame</a>
       </div>
     </div>
-    <div id="fas-stage">
+    <div id="stage">
       <div class="ring"></div>
       <div class="ring2"></div>
-      <div id="fas-mouse3d">
-        <div class="mwrap" id="fas-mwrap">
-          <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104150.png" alt="Aqua Mouse 3D" id="fas-mimg" />
-        </div>
-      </div>
+      <canvas id="canvas3d"></canvas>
+      <div id="loader3d"><div class="spin"></div><div class="ltxt">Loading 3D model…</div></div>
       <div class="ft ft1">🫧 Real liquid</div>
       <div class="ft ft2">📶 Dual Wireless</div>
       <div class="ft ft3">💡 RGB Glow</div>
       <div class="ft ft4">🐠 Clownfish inside</div>
-      <div id="fas-pmini">
+      <div id="pmini">
         <div class="pn">Clown Fish Aqua Mouse</div>
         <div class="pp">€29.99 <s>€39.99</s> · ★★★★★</div>
       </div>
+      <div id="draghint">↔ Drag to rotate · move mouse to tilt</div>
     </div>
   </div>
 
@@ -311,87 +293,66 @@
   <div class="bub" style="width:16px;height:16px;left:78%;top:80%;animation-duration:6.5s;animation-delay:.8s"></div>
   <div class="bub" style="width:11px;height:11px;left:52%;top:88%;animation-duration:10s;animation-delay:3s"></div>
   <div class="bub" style="width:24px;height:24px;left:38%;top:70%;animation-duration:7.5s;animation-delay:4s"></div>
-  <div class="bub" style="width:18px;height:18px;left:65%;top:65%;animation-duration:8.5s;animation-delay:2.5s"></div>
-  <div class="bub" style="width:12px;height:12px;left:22%;top:50%;animation-duration:11s;animation-delay:1s"></div>
 
-  <div id="fas-scrh">Scroll to explore ↓</div>
+  <div id="scrh">Scroll to explore ↓</div>
 </section>
 
-<!-- ============ TICKER ============ -->
-<div id="fas-tick">
+<div id="tick">
   <div class="trk">
-    <span class="ti"><span class="td"></span>Aqua Mouse</span>
-    <span class="ti"><span class="td"></span>Frutiger Aero</span>
-    <span class="ti"><span class="td"></span>Y2K Nostalgia</span>
-    <span class="ti"><span class="td"></span>Wireless</span>
-    <span class="ti"><span class="td"></span>Clown Fish</span>
-    <span class="ti"><span class="td"></span>Windows Vista Core</span>
-    <span class="ti"><span class="td"></span>Designed in Spain</span>
-    <span class="ti"><span class="td"></span>Hall of Fame</span>
-    <span class="ti"><span class="td"></span>Liquid Mouse</span>
-    <span class="ti"><span class="td"></span>Aqua Mouse</span>
-    <span class="ti"><span class="td"></span>Frutiger Aero</span>
-    <span class="ti"><span class="td"></span>Y2K Nostalgia</span>
-    <span class="ti"><span class="td"></span>Wireless</span>
-    <span class="ti"><span class="td"></span>Clown Fish</span>
-    <span class="ti"><span class="td"></span>Windows Vista Core</span>
-    <span class="ti"><span class="td"></span>Designed in Spain</span>
-    <span class="ti"><span class="td"></span>Hall of Fame</span>
-    <span class="ti"><span class="td"></span>Liquid Mouse</span>
+    <span class="ti"><span class="tdd"></span>Aqua Mouse</span><span class="ti"><span class="tdd"></span>Frutiger Aero</span><span class="ti"><span class="tdd"></span>Y2K Nostalgia</span><span class="ti"><span class="tdd"></span>Wireless</span><span class="ti"><span class="tdd"></span>Clown Fish</span><span class="ti"><span class="tdd"></span>Windows Vista Core</span><span class="ti"><span class="tdd"></span>Designed in Spain</span><span class="ti"><span class="tdd"></span>Hall of Fame</span><span class="ti"><span class="tdd"></span>Liquid Mouse</span>
+    <span class="ti"><span class="tdd"></span>Aqua Mouse</span><span class="ti"><span class="tdd"></span>Frutiger Aero</span><span class="ti"><span class="tdd"></span>Y2K Nostalgia</span><span class="ti"><span class="tdd"></span>Wireless</span><span class="ti"><span class="tdd"></span>Clown Fish</span><span class="ti"><span class="tdd"></span>Windows Vista Core</span><span class="ti"><span class="tdd"></span>Designed in Spain</span><span class="ti"><span class="tdd"></span>Hall of Fame</span><span class="ti"><span class="tdd"></span>Liquid Mouse</span>
   </div>
 </div>
 
-<!-- ============ REST ============ -->
-<div id="fas-rest">
+<div id="rest">
   <div class="bub2" style="width:18px;height:18px;left:8%;top:18%;animation-duration:7s"></div>
   <div class="bub2" style="width:12px;height:12px;left:18%;top:48%;animation-duration:9s;animation-delay:1.5s"></div>
   <div class="bub2" style="width:24px;height:24px;left:88%;top:25%;animation-duration:8s;animation-delay:2s"></div>
   <div class="bub2" style="width:14px;height:14px;left:72%;top:65%;animation-duration:6s;animation-delay:.8s"></div>
   <div class="bub2" style="width:20px;height:20px;left:42%;top:80%;animation-duration:7.5s;animation-delay:3s"></div>
-  <div class="bub2" style="width:16px;height:16px;left:30%;top:35%;animation-duration:8.5s;animation-delay:2.5s"></div>
 
-  <section id="fas-products">
+  <section id="products">
     <div class="ey">Our Products</div>
     <h2>Shop the Aqua Mouse Collection</h2>
     <div class="pgrid">
       <div class="pcard">
         <div class="pi" style="background:linear-gradient(135deg,#d5f5ff,#c0f0e8)">
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Clown Fish Aqua Mouse" />
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Clown Fish Aqua Mouse" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">⭐ Best seller</span>
           <div class="pname">Clown Fish Aqua Mouse</div>
           <div class="pdesc">Blue liquid + floating clownfish. Bluetooth &amp; 2.4G dual mode, USB-C rechargeable, RGB glow.</div>
           <div class="pfooter">
-            <a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" class="pbuy">Buy on Amazon ↗</a>
+            <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="pbuy">Buy on Amazon ↗</a>
             <span class="pstars">★★★★★</span>
           </div>
         </div>
       </div>
       <div class="pcard">
         <div class="pi" style="background:linear-gradient(135deg,#ede0ff,#d8eeff)">
-          <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-105238.png" alt="Penguin Aqua Mouse" />
+          <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-105238.png" alt="Penguin Aqua Mouse" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">🐧 Fan favorite</span>
           <div class="pname">Penguin Aqua Mouse</div>
           <div class="pdesc">Purple liquid with a penguin figurine. 2.4G wireless, AA battery. Full Y2K energy.</div>
           <div class="pfooter">
-            <a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" class="pbuy">Buy on Amazon ↗</a>
+            <a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" rel="noopener" class="pbuy">Buy on Amazon ↗</a>
             <span class="pstars">★★★★★</span>
           </div>
         </div>
       </div>
       <div class="pcard">
         <div class="pi" style="background:linear-gradient(135deg,#d5f5ff,#c0eedf)">
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/phototaken001kifres-3kD3VDtXHG9UVLql.png" alt="Pencil Holder Clown Fish" />
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/phototaken001kifres-3kD3VDtXHG9UVLql.png" alt="Pencil Holder Clown Fish" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">🆕 New</span>
           <div class="pname">Pencil Holder Clown Fish</div>
           <div class="pdesc">Liquid-filled desk organiser with two floating clownfish. No power needed.</div>
           <div class="pfooter">
-            <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" class="pbuy">Buy on Amazon ↗</a>
+            <a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" rel="noopener" class="pbuy">Buy on Amazon ↗</a>
             <span class="pstars">★★★★☆</span>
           </div>
         </div>
@@ -412,13 +373,13 @@
     </div>
   </section>
 
-  <section id="fas-hof" style="padding-top:0">
+  <section id="hof" style="padding-top:0">
     <div class="ey">Aqua Mouse History</div>
     <h2>🏆 Aqua Mouse Hall of Fame</h2>
-    <p style="text-align:center;font-size:13px;color:#335566;margin-top:-22px;margin-bottom:30px;max-width:620px;margin-left:auto;margin-right:auto;text-shadow:0 1px 4px rgba(255,255,255,0.7)">These mice lived in our store and are now sold. Each one is a piece of liquid mouse history.</p>
+    <p style="text-align:center;font-size:13px;color:#335566;margin-top:-22px;margin-bottom:30px;max-width:620px;margin-left:auto;margin-right:auto;text-shadow:0 1px 4px rgba(255,255,255,0.7)">These mice lived in our store and are now sold. Each one is a piece of liquid mouse history — proof that the aqua aesthetic has been with us all along.</p>
     <div class="hofg">
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104136.png" alt="Fluvi Mouse" />
+        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104136.png" alt="Fluvi Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Fluvi Mouse</div>
@@ -428,7 +389,7 @@
         </div>
       </div>
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104145.png" alt="Care Bears Mouse" />
+        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104145.png" alt="Care Bears Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Care Bears Mouse</div>
@@ -438,17 +399,17 @@
         </div>
       </div>
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104150.png" alt="Россия Mouse" />
+        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104150.png" alt="Rossiya Airlines Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Россия Airlines Mouse</div>
           <div class="hofy">Russia · circa 2002–2005</div>
-          <div class="hofst">A corporate promotional item from Rossiya Airlines. This blue liquid mouse houses a tiny Rossiya airplane floating in clear liquid. Given to frequent flyers in the early 2000s.</div>
+          <div class="hofst">A corporate promotional item from Rossiya Airlines. This blue liquid mouse houses a tiny airplane floating in clear liquid. Given to frequent flyers in the early 2000s.</div>
           <div class="hoft"><span class="hoftag">Россия Airlines</span><span class="hoftag">Russia</span><span class="hoftag">Rare</span></div>
         </div>
       </div>
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104331.png" alt="Kinder Surprise Mouse" />
+        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104331.png" alt="Kinder Surprise Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Kinder Surprise Mouse</div>
@@ -460,38 +421,38 @@
     </div>
   </section>
 
-  <section id="fas-gallery" style="padding-top:0">
+  <section id="gallery" style="padding-top:0">
     <div class="ey">Frutiger Aero Universe</div>
     <h2>Gallery &amp; curiosities</h2>
     <div class="galt">
-      <button class="gtb act" onclick="fasGal('all',this)">All</button>
-      <button class="gtb" onclick="fasGal('product',this)">Products</button>
-      <button class="gtb" onclick="fasGal('rgb',this)">RGB &amp; Glow</button>
-      <button class="gtb" onclick="fasGal('hof',this)">Hall of Fame</button>
+      <button class="gtb act" onclick="filterGal('all',this)">All</button>
+      <button class="gtb" onclick="filterGal('product',this)">Products</button>
+      <button class="gtb" onclick="filterGal('rgb',this)">RGB &amp; Glow</button>
+      <button class="gtb" onclick="filterGal('hof',this)">Hall of Fame</button>
     </div>
-    <div class="ggr" id="fas-galgrid">
+    <div class="ggr" id="galgrid">
       <div class="gc" data-cat="product">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Clown Fish Aqua Mouse" style="object-fit:contain;background:#d5f5ff;padding:8px" />
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Clown Fish Aqua Mouse" style="object-fit:contain;background:#d5f5ff;padding:8px" loading="lazy" />
         <div class="gcb"><div class="gct">Clown Fish Aqua Mouse</div><div class="gcs">The original — clear blue liquid &amp; clownfish inside.</div></div>
       </div>
       <div class="gc" data-cat="rgb">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/Yyv922oLjJu31o3o/phototaken001kifres-3kD3VDtXHG9UVLql.png" alt="RGB green glow" />
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/Yyv922oLjJu31o3o/phototaken001kifres-3kD3VDtXHG9UVLql.png" alt="RGB green glow" loading="lazy" />
         <div class="gcb"><div class="gct">RGB green glow</div><div class="gcs">Teal LED — liquid amplifies the light beautifully.</div></div>
       </div>
       <div class="gc" data-cat="rgb">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Blue RGB mode" />
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Blue RGB mode" loading="lazy" />
         <div class="gcb"><div class="gct">Blue RGB mode</div><div class="gcs">Deep blue LED — the fish floats like in a real aquarium.</div></div>
       </div>
       <div class="gc" data-cat="product">
-        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-105238.png" alt="Penguin Aqua Mouse" style="object-fit:contain;background:#ede0ff;padding:8px" />
+        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-105238.png" alt="Penguin Aqua Mouse" style="object-fit:contain;background:#ede0ff;padding:8px" loading="lazy" />
         <div class="gcb"><div class="gct">Penguin Aqua Mouse</div><div class="gcs">Purple edition with a penguin figurine.</div></div>
       </div>
       <div class="gc" data-cat="hof">
-        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104136.png" alt="Fluvi Mouse" />
+        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104136.png" alt="Fluvi Mouse" loading="lazy" />
         <div class="gcb"><div class="gct">Fluvi Mouse · Expo 2008</div><div class="gcs">Zaragoza World Expo promotional mouse. Sold out.</div></div>
       </div>
       <div class="gc" data-cat="hof">
-        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104331.png" alt="Kinder Surprise Mouse" />
+        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104331.png" alt="Kinder Surprise Mouse" loading="lazy" />
         <div class="gcb"><div class="gct">Kinder Surprise Mouse</div><div class="gcs">Ultra rare Ferrero promotional piece from Europe.</div></div>
       </div>
     </div>
@@ -523,12 +484,12 @@
     <div class="ctt">Ready for your Aqua Mouse?</div>
     <div class="ctsb">Available on Amazon worldwide. International shipping. The most Y2K accessory for your setup is waiting.</div>
     <div class="ctbs">
-      <a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" class="bw">Clownfish Mouse ↗</a>
-      <a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" class="bow">Penguin Mouse ↗</a>
+      <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="bw">Clownfish Mouse ↗</a>
+      <a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" rel="noopener" class="bow">Penguin Mouse ↗</a>
     </div>
   </div>
 
-  <ft>
+  <footer>
     <div class="fti">
       <div>
         <div class="ftb">FrutigerAeroStore</div>
@@ -537,109 +498,220 @@
       <div>
         <div class="ftct">Shop</div>
         <ul class="ftlk">
-          <li><a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank">Aqua Mouse (Clownfish)</a></li>
-          <li><a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank">Aqua Mouse (Penguin)</a></li>
-          <li><a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank">Pencil Holder</a></li>
+          <li><a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener">Aqua Mouse (Clownfish)</a></li>
+          <li><a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" rel="noopener">Aqua Mouse (Penguin)</a></li>
+          <li><a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" rel="noopener">Pencil Holder</a></li>
         </ul>
       </div>
       <div>
         <div class="ftct">Info</div>
         <ul class="ftlk">
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#fas-hof">Hall of Fame</a></li>
+          <li><a onclick="openModal('legal')">Legal Notice</a></li>
+          <li><a onclick="openModal('privacy')">Privacy &amp; Cookies</a></li>
+          <li><a onclick="openModal('affiliate')">Affiliate Disclosure</a></li>
+          <li><a href="#hof">Hall of Fame</a></li>
         </ul>
       </div>
     </div>
     <div class="ftbt">
       <span class="ftcp">© 2025 FrutigerAeroStore · All rights reserved · Designed in Spain</span>
       <div class="ftsl">
-        <a href="https://www.instagram.com/frutigeraerostore" target="_blank" class="fts">IG</a>
-        <a href="https://tiktok.com/frutigeraerostore" target="_blank" class="fts">TK</a>
-        <a href="https://www.twitter.com/frutigeraerostore" target="_blank" class="fts">TW</a>
+        <a href="https://www.instagram.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">IG</a>
+        <a href="https://tiktok.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">TK</a>
+        <a href="https://www.twitter.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">TW</a>
       </div>
     </div>
-  </ft>
-</div>
+    <div class="ftdisc">
+      FrutigerAeroStore is a participant in the Amazon Associates Program. As an Amazon Associate we may earn from qualifying purchases. Brand names and trademarks shown in the Hall of Fame (Fluvi, Care Bears, Россия, Kinder Surprise) belong to their respective owners and are shown for historical/illustrative purposes only.
+    </div>
+  </footer>
 </div>
 
+<!-- Cookie banner -->
+<div id="cookie">
+  <p>🍪 We use only essential cookies to make this site work. We don't track you or sell your data. <a onclick="openModal('privacy')">Learn more</a>.</p>
+  <div class="cbtns">
+    <button class="cacc" onclick="acceptCookies()">Got it</button>
+    <button class="cdec" onclick="acceptCookies()">Essential only</button>
+  </div>
+</div>
+
+<!-- Legal modal -->
+<div id="modal">
+  <div class="modbox">
+    <button class="modclose" onclick="closeModal()">×</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const canvas = document.getElementById('canvas3d');
+const stage = document.getElementById('stage');
+const loaderEl = document.getElementById('loader3d');
+
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+camera.position.set(0, 0, 6);
+
+// Environment for nice reflections on the glossy mouse
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+// Lights
+scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(4,5,5); scene.add(key);
+const fill = new THREE.PointLight(0x00d4ff, 1.5, 30); fill.position.set(-4,-2,3); scene.add(fill);
+const rim = new THREE.PointLight(0x00ffa3, 1.2, 30); rim.position.set(0,4,-4); scene.add(rim);
+
+let model = null;
+let targetRY = 0, targetRX = 0, currentRY = 0, currentRX = 0;
+let userRY = 0, userRX = 0; // extra rotation from dragging
+let isDragging = false, lastX = 0, lastY = 0;
+
+function sizeRenderer(){
+  const w = stage.clientWidth, h = stage.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w/h;
+  camera.updateProjectionMatrix();
+}
+sizeRenderer();
+window.addEventListener('resize', sizeRenderer);
+
+// Load model
+const draco = new DRACOLoader();
+draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+const gltfLoader = new GLTFLoader();
+gltfLoader.setDRACOLoader(draco);
+
+gltfLoader.load('3d/clownfish_mouse.glb', (gltf)=>{
+  model = gltf.scene;
+  // Center & scale
+  const box = new THREE.Box3().setFromObject(model);
+  const size = box.getSize(new THREE.Vector3());
+  const center = box.getCenter(new THREE.Vector3());
+  model.position.sub(center);
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const scale = 3.2 / maxDim;
+  model.scale.setScalar(scale);
+  scene.add(model);
+  loaderEl.style.display = 'none';
+}, (xhr)=>{
+  if(xhr.total){
+    const pct = Math.round((xhr.loaded/xhr.total)*100);
+    loaderEl.querySelector('.ltxt').textContent = 'Loading 3D model… ' + pct + '%';
+  }
+}, (err)=>{
+  console.error('3D load error', err);
+  loaderEl.querySelector('.ltxt').textContent = '3D unavailable';
+  loaderEl.querySelector('.spin').style.display = 'none';
+});
+
+// Pointer parallax (tilt)
+window.addEventListener('mousemove', (e)=>{
+  if(isDragging) return;
+  const rect = stage.getBoundingClientRect();
+  const x = (e.clientX - (rect.left + rect.width/2)) / (rect.width/2);
+  const y = (e.clientY - (rect.top + rect.height/2)) / (rect.height/2);
+  targetRY = x * 0.45;
+  targetRX = y * 0.3;
+});
+
+// Drag to rotate
+canvas.addEventListener('pointerdown', (e)=>{
+  isDragging = true; lastX = e.clientX; lastY = e.clientY; canvas.setPointerCapture(e.pointerId);
+});
+canvas.addEventListener('pointermove', (e)=>{
+  if(!isDragging) return;
+  userRY += (e.clientX - lastX) * 0.01;
+  userRX += (e.clientY - lastY) * 0.01;
+  userRX = Math.max(-0.8, Math.min(0.8, userRX));
+  lastX = e.clientX; lastY = e.clientY;
+});
+canvas.addEventListener('pointerup', ()=>{ isDragging=false; });
+canvas.addEventListener('pointercancel', ()=>{ isDragging=false; });
+
+const clock = new THREE.Clock();
+function animate(){
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+  currentRY += (targetRY - currentRY) * 0.06;
+  currentRX += (targetRX - currentRX) * 0.06;
+  if(model){
+    model.rotation.y = currentRY + userRY + t * 0.18;
+    model.rotation.x = currentRX + userRX;
+    model.position.y = Math.sin(t * 0.8) * 0.12;
+  }
+  fill.position.x = -4 + Math.sin(t*0.5)*2;
+  rim.position.x = Math.cos(t*0.4)*3;
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+
 <script>
-function fasGal(cat,btn){
-  document.querySelectorAll('#fas .gtb').forEach(function(t){t.classList.remove('act')});
+// Gallery filter
+function filterGal(cat, btn){
+  document.querySelectorAll('.gtb').forEach(t=>t.classList.remove('act'));
   btn.classList.add('act');
-  document.querySelectorAll('#fas-galgrid .gc').forEach(function(c){
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  document.querySelectorAll('#galgrid .gc').forEach(c=>{
+    c.style.display = (cat==='all' || c.dataset.cat===cat) ? '' : 'none';
   });
 }
 
+// Cookie banner (uses in-memory + try localStorage)
+function acceptCookies(){
+  document.getElementById('cookie').classList.add('hide');
+  try{ localStorage.setItem('fas_cookie_ok','1'); }catch(e){}
+}
 (function(){
-  const mwrap = document.getElementById('fas-mwrap');
-  const stage = document.getElementById('fas-stage');
-  if(!mwrap || !stage) return;
-
-  let targetRY=0, targetRX=0;
-  let currentRY=0, currentRX=0;
-  let isDragging=false, dragStartX=0, dragStartY=0;
-  let lastRY=0, lastRX=0;
-
-  function updateTilt(e){
-    if(isDragging) return;
-    const rect = stage.getBoundingClientRect();
-    const cx = rect.left + rect.width/2;
-    const cy = rect.top + rect.height/2;
-    const x = (e.clientX - cx) / (rect.width/2);
-    const y = (e.clientY - cy) / (rect.height/2);
-    targetRY = x * 28;
-    targetRX = -y * 18;
-  }
-
-  document.addEventListener('mousemove', updateTilt);
-
-  mwrap.addEventListener('mousedown', function(e){
-    isDragging = true;
-    dragStartX = e.clientX;
-    dragStartY = e.clientY;
-    lastRY = currentRY;
-    lastRX = currentRX;
-    e.preventDefault();
-  });
-
-  document.addEventListener('mousemove', function(e){
-    if(!isDragging) return;
-    const dx = e.clientX - dragStartX;
-    const dy = e.clientY - dragStartY;
-    targetRY = lastRY + dx * 0.6;
-    targetRX = lastRX - dy * 0.6;
-  });
-
-  document.addEventListener('mouseup', function(){
-    isDragging = false;
-  });
-
-  // Touch support
-  mwrap.addEventListener('touchstart', function(e){
-    isDragging = true;
-    dragStartX = e.touches[0].clientX;
-    dragStartY = e.touches[0].clientY;
-    lastRY = currentRY;
-    lastRX = currentRX;
-  });
-  document.addEventListener('touchmove', function(e){
-    if(!isDragging) return;
-    const dx = e.touches[0].clientX - dragStartX;
-    const dy = e.touches[0].clientY - dragStartY;
-    targetRY = lastRY + dx * 0.6;
-    targetRX = lastRX - dy * 0.6;
-  });
-  document.addEventListener('touchend', function(){ isDragging=false; });
-
-  function animate(){
-    currentRY += (targetRY - currentRY) * 0.08;
-    currentRX += (targetRX - currentRX) * 0.08;
-    mwrap.style.transform = `rotateY(${currentRY}deg) rotateX(${currentRX}deg)`;
-    requestAnimationFrame(animate);
-  }
-  animate();
+  try{ if(localStorage.getItem('fas_cookie_ok')==='1'){ document.getElementById('cookie').classList.add('hide'); } }catch(e){}
 })();
+
+// Legal modals
+const LEGAL = {
+  legal: `<h3>Legal Notice</h3>
+    <p><strong>Site owner:</strong> FrutigerAeroStore.</p>
+    <p><strong>Contact:</strong> walkfrutigeraero@gmail.com</p>
+    <p>This website is an informational storefront. All purchases are completed on Amazon, subject to Amazon's own terms, shipping and returns policies. FrutigerAeroStore is not responsible for transactions, payments or deliveries handled by Amazon.</p>
+    <p>Product designs are conceived in Spain. Manufacturing and fulfilment may be carried out by third parties.</p>`,
+  privacy: `<h3>Privacy &amp; Cookies</h3>
+    <h4>What we collect</h4>
+    <p>This site does not run analytics or advertising trackers. We only use one essential cookie to remember that you dismissed the cookie notice. We do not store personal data on our servers.</p>
+    <h4>External links</h4>
+    <p>When you click a "Buy on Amazon" button you leave this site and go to Amazon, which applies its own privacy policy and cookies.</p>
+    <h4>Your rights</h4>
+    <p>Since we don't collect personal data, there is nothing to access, rectify or delete on our side. For Amazon purchases, manage your data through your Amazon account.</p>`,
+  affiliate: `<h3>Affiliate Disclosure</h3>
+    <p>FrutigerAeroStore may participate in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn fees by linking to Amazon.</p>
+    <p>This means that, at no additional cost to you, we may earn a small commission if you buy through our links. This never changes the price you pay.</p>
+    <p>Brand names shown in the "Hall of Fame" section (Fluvi, Care Bears, Россия Airlines, Kinder Surprise) are trademarks of their respective owners and are displayed purely for historical and illustrative purposes. FrutigerAeroStore is not affiliated with, endorsed by, or sponsored by these brands.</p>`
+};
+function openModal(key){
+  document.getElementById('modal-content').innerHTML = LEGAL[key] || '';
+  document.getElementById('modal').classList.add('show');
+}
+function closeModal(){ document.getElementById('modal').classList.remove('show'); }
+document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id==='modal') closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
 </script>
+
+</body>
+</html>
