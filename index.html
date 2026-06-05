@@ -32,7 +32,7 @@ body{overflow-x:hidden;width:100%}
 
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 6vw;background:rgba(255,255,255,0.32);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1.5px solid rgba(255,255,255,0.5)}
 .navlg{display:flex;align-items:center;gap:10px;text-decoration:none}
-.navlg img{width:46px;height:46px;border-radius:12px;border:2px solid rgba(255,255,255,0.9);object-fit:cover;box-shadow:0 4px 12px rgba(0,100,180,0.15)}
+.navlg img{width:46px;height:46px;border-radius:12px;object-fit:cover;object-position:center;box-shadow:0 4px 12px rgba(0,100,180,0.2)}
 .navbr{font-size:15px;font-weight:900;background:linear-gradient(135deg,#0066cc,#00b070);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;letter-spacing:-.3px}
 .navsb{font-size:9px;font-weight:700;color:#1a6a80;letter-spacing:.5px;margin-top:1px}
 .navlks{display:flex;gap:22px;list-style:none;align-items:center}
@@ -611,8 +611,13 @@ gltfLoader.load('3d/clownfish_mouse.glb', (gltf)=>{
   const center = box.getCenter(new THREE.Vector3());
   model.position.sub(center);
   const maxDim = Math.max(size.x, size.y, size.z);
-  const scale = 3.2 / maxDim;
+  const scale = 2.7 / maxDim;
   model.scale.setScalar(scale);
+  // Nice 3/4 starting angle (not side-on)
+  model.rotation.y = -0.6;
+  model.rotation.x = 0.35;
+  userRY = -0.6;
+  userRX = 0.35;
   scene.add(model);
   loaderEl.style.display = 'none';
 }, (xhr)=>{
@@ -657,9 +662,9 @@ function animate(){
   currentRY += (targetRY - currentRY) * 0.06;
   currentRX += (targetRX - currentRX) * 0.06;
   if(model){
-    model.rotation.y = currentRY + userRY + t * 0.18;
+    model.rotation.y = currentRY + userRY + t * 0.08;
     model.rotation.x = currentRX + userRX;
-    model.position.y = Math.sin(t * 0.8) * 0.12;
+    model.position.y = Math.sin(t * 0.8) * 0.1;
   }
   fill.position.x = -4 + Math.sin(t*0.5)*2;
   rim.position.x = Math.cos(t*0.4)*3;
