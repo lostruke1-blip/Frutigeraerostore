@@ -331,7 +331,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
       </div>
       <div class="pcard">
         <div class="pi" style="background:linear-gradient(135deg,#ede0ff,#d8eeff)">
-          <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-105238.png" alt="Penguin Aqua Mouse" loading="lazy" />
+          <img src="img/penguin_mouse.jpg" alt="Penguin Aqua Mouse" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">🐧 Fan favorite</span>
@@ -379,7 +379,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
     <p style="text-align:center;font-size:13px;color:#335566;margin-top:-22px;margin-bottom:30px;max-width:620px;margin-left:auto;margin-right:auto;text-shadow:0 1px 4px rgba(255,255,255,0.7)">These mice lived in our store and are now sold. Each one is a piece of liquid mouse history — proof that the aqua aesthetic has been with us all along.</p>
     <div class="hofg">
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104136.png" alt="Fluvi Mouse" loading="lazy" />
+        <img class="hofi" src="img/fluvi.jpg" alt="Fluvi Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Fluvi Mouse</div>
@@ -389,7 +389,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
         </div>
       </div>
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104145.png" alt="Care Bears Mouse" loading="lazy" />
+        <img class="hofi" src="img/carebears.jpg" alt="Care Bears Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Care Bears Mouse</div>
@@ -399,7 +399,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
         </div>
       </div>
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104150.png" alt="Rossiya Airlines Mouse" loading="lazy" />
+        <img class="hofi" src="img/rossiya.jpg" alt="Rossiya Airlines Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Россия Airlines Mouse</div>
@@ -409,7 +409,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
         </div>
       </div>
       <div class="hofc">
-        <img class="hofi" src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104331.png" alt="Kinder Surprise Mouse" loading="lazy" />
+        <img class="hofi" src="img/kinder.jpg" alt="Kinder Surprise Mouse" loading="lazy" />
         <div class="hofb">
           <span class="hofs">✕ Sold out · Gone forever</span>
           <div class="hofn">Kinder Surprise Mouse</div>
@@ -444,15 +444,15 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
         <div class="gcb"><div class="gct">Blue RGB mode</div><div class="gcs">Deep blue LED — the fish floats like in a real aquarium.</div></div>
       </div>
       <div class="gc" data-cat="product">
-        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-105238.png" alt="Penguin Aqua Mouse" style="object-fit:contain;background:#ede0ff;padding:8px" loading="lazy" />
+        <img src="img/penguin_mouse.jpg" alt="Penguin Aqua Mouse" style="object-fit:contain;background:#ede0ff;padding:8px" loading="lazy" />
         <div class="gcb"><div class="gct">Penguin Aqua Mouse</div><div class="gcs">Purple edition with a penguin figurine.</div></div>
       </div>
       <div class="gc" data-cat="hof">
-        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104136.png" alt="Fluvi Mouse" loading="lazy" />
+        <img src="img/fluvi.jpg" alt="Fluvi Mouse" loading="lazy" />
         <div class="gcb"><div class="gct">Fluvi Mouse · Expo 2008</div><div class="gcs">Zaragoza World Expo promotional mouse. Sold out.</div></div>
       </div>
       <div class="gc" data-cat="hof">
-        <img src="https://yellowgreen-starling-842260.hostingersite.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-11-104331.png" alt="Kinder Surprise Mouse" loading="lazy" />
+        <img src="img/kinder.jpg" alt="Kinder Surprise Mouse" loading="lazy" />
         <div class="gcb"><div class="gct">Kinder Surprise Mouse</div><div class="gcs">Ultra rare Ferrero promotional piece from Europe.</div></div>
       </div>
     </div>
@@ -556,6 +556,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 const canvas = document.getElementById('canvas3d');
@@ -600,6 +601,7 @@ const draco = new DRACOLoader();
 draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
 const gltfLoader = new GLTFLoader();
 gltfLoader.setDRACOLoader(draco);
+gltfLoader.setMeshoptDecoder(MeshoptDecoder);
 
 gltfLoader.load('3d/clownfish_mouse.glb', (gltf)=>{
   model = gltf.scene;
