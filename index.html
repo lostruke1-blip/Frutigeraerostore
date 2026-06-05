@@ -74,8 +74,10 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 #pmini .pp{font-size:14px;font-weight:900;color:#0099aa;display:flex;align-items:center;justify-content:center;gap:6px}
 #pmini .pp s{font-size:11px;font-weight:500;color:#888;text-decoration:line-through}
 #draghint{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;color:rgba(0,90,110,0.6);letter-spacing:.5px;z-index:8;white-space:nowrap}
-#scrh{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:700;color:rgba(0,80,100,0.55);letter-spacing:1.5px;text-transform:uppercase;animation:blnk 2.5s ease-in-out infinite;z-index:10}
-@keyframes blnk{0%,100%{opacity:.5}50%{opacity:1}}
+#scrh{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border:1.5px solid rgba(0,180,200,0.4);padding:9px 20px;border-radius:999px;font-size:11px;font-weight:800;color:#006677;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;z-index:30;box-shadow:0 4px 16px rgba(0,140,180,0.2);transition:all .2s}
+#scrh:hover{background:rgba(255,255,255,0.98);transform:translateX(-50%) translateY(-2px)}
+#scrh .scrh-arrow{font-size:14px;animation:scrbounce 1.5s ease-in-out infinite}
+@keyframes scrbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
 
 /* TICKER */
 #tick{position:relative;z-index:5;padding:14px 0;overflow:hidden;background:rgba(255,255,255,0.32);backdrop-filter:blur(10px);border-top:1.5px solid rgba(255,255,255,0.7);border-bottom:1.5px solid rgba(255,255,255,0.7)}
@@ -182,7 +184,14 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
 #cookie .cacc{background:linear-gradient(135deg,#00bcd4,#00c890);color:#fff}
 #cookie .cdec{background:rgba(0,80,100,0.08);color:#005566}
 
-/* Legal modal */
+/* Lightbox */
+#lightbox{position:fixed;inset:0;z-index:10001;background:rgba(0,15,30,0.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;flex-direction:column;padding:30px;cursor:zoom-out}
+#lightbox.show{display:flex}
+#lightbox img{max-width:90vw;max-height:80vh;border-radius:18px;box-shadow:0 20px 70px rgba(0,0,0,0.5);cursor:default;object-fit:contain}
+#lightbox .lb-close{position:absolute;top:20px;right:28px;font-size:40px;color:#fff;cursor:pointer;font-weight:300;line-height:1;opacity:.8;transition:opacity .2s}
+#lightbox .lb-close:hover{opacity:1}
+#lb-caption{color:#fff;font-size:14px;font-weight:700;margin-top:18px;text-align:center;max-width:600px;text-shadow:0 2px 8px rgba(0,0,0,0.5)}
+.hofi,.gc img{cursor:zoom-in}
 #modal{position:fixed;inset:0;z-index:10000;background:rgba(0,20,35,0.7);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
 #modal.show{display:flex}
 .modbox{background:#fff;border-radius:24px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;padding:32px 30px;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
@@ -205,7 +214,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   .navbr{font-size:13px}.navsb{font-size:8.5px}.navlg img{width:38px;height:38px}
   .navcta{padding:8px 16px;font-size:11px!important}
   #hcont{padding:30px 6vw 10px}
-  #hero{min-height:auto;padding-bottom:40px}
+  #hero{min-height:auto;padding-bottom:64px}
   #hcont h1{font-size:30px;letter-spacing:-1.2px;margin-bottom:14px}
   .badge{font-size:9.5px;padding:5px 13px;margin-bottom:14px}
   .hsub{font-size:13.5px;margin-bottom:22px}
@@ -217,7 +226,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   #pmini{min-width:210px;padding:11px 18px;bottom:0}
   #pmini .pn{font-size:12.5px}#pmini .pp{font-size:13px}
   #draghint{font-size:9.5px;bottom:-26px}
-  #scrh{display:none}
+  #scrh{bottom:10px;font-size:10px;padding:8px 16px}
   #tick{padding:12px 0}
   section{padding:44px 6vw}
   h2{font-size:24px;margin-bottom:26px;letter-spacing:-.5px}
@@ -343,7 +352,10 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   <div class="bub" style="width:11px;height:11px;left:52%;top:88%;animation-duration:10s;animation-delay:3s"></div>
   <div class="bub" style="width:24px;height:24px;left:38%;top:70%;animation-duration:7.5s;animation-delay:4s"></div>
 
-  <div id="scrh">Scroll to explore ↓</div>
+  <a href="#products" id="scrh">
+    <span class="scrh-txt">Scroll to explore</span>
+    <span class="scrh-arrow">↓</span>
+  </a>
 </section>
 
 <div id="tick">
@@ -409,19 +421,6 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <div class="ey">Why choose us</div>
-    <h2>Obsessively designed, genuinely unique</h2>
-    <div class="fgrid">
-      <div class="fcard"><div class="ficon">🫧</div><div class="ftitle">Real liquid + floaters</div><div class="fdesc">Each Aqua Mouse has a sealed chamber with liquid and floating figures — the detail that makes it unforgettable.</div></div>
-      <div class="fcard"><div class="ficon">📶</div><div class="ftitle">Bluetooth + 2.4G dual</div><div class="fdesc">Switch instantly between Bluetooth and 2.4G USB. Works on Windows, Mac &amp; Android with zero setup.</div></div>
-      <div class="fcard"><div class="ficon">💡</div><div class="ftitle">Multicolour RGB glow</div><div class="fdesc">Built-in LED that cycles through colours. The liquid amplifies the light for a mesmerising aquarium effect.</div></div>
-      <div class="fcard"><div class="ficon">🔋</div><div class="ftitle">USB-C rechargeable</div><div class="fdesc">Full charge in under 2 hours. Modern internals wrapped in a beautifully nostalgic shell.</div></div>
-      <div class="fcard"><div class="ficon">🌍</div><div class="ftitle">Worldwide shipping</div><div class="fdesc">Available on Amazon internationally. Ships from Spain. Your Aqua Mouse gets to you wherever you are.</div></div>
-      <div class="fcard"><div class="ficon">🎁</div><div class="ftitle">The perfect gift</div><div class="fdesc">For Y2K fans, Frutiger Aero collectors, or anyone who wants a desk setup that starts conversations.</div></div>
-    </div>
-  </section>
-
   <section id="hof" style="padding-top:0">
     <div class="ey">Aqua Mouse History</div>
     <h2>🏆 Aqua Mouse Hall of Fame</h2>
@@ -467,6 +466,19 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
           <div class="hoft"><span class="hoftag">Kinder Surprise</span><span class="hoftag">Ferrero</span><span class="hoftag">Ultra rare</span></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="ey">Why choose us</div>
+    <h2>Obsessively designed, genuinely unique</h2>
+    <div class="fgrid">
+      <div class="fcard"><div class="ficon">🫧</div><div class="ftitle">Real liquid + floaters</div><div class="fdesc">Each Aqua Mouse has a sealed chamber with liquid and floating figures — the detail that makes it unforgettable.</div></div>
+      <div class="fcard"><div class="ficon">📶</div><div class="ftitle">Bluetooth + 2.4G dual</div><div class="fdesc">Switch instantly between Bluetooth and 2.4G USB. Works on Windows, Mac &amp; Android with zero setup.</div></div>
+      <div class="fcard"><div class="ficon">💡</div><div class="ftitle">Multicolour RGB glow</div><div class="fdesc">Built-in LED that cycles through colours. The liquid amplifies the light for a mesmerising aquarium effect.</div></div>
+      <div class="fcard"><div class="ficon">🔋</div><div class="ftitle">USB-C rechargeable</div><div class="fdesc">Full charge in under 2 hours. Modern internals wrapped in a beautifully nostalgic shell.</div></div>
+      <div class="fcard"><div class="ficon">🌍</div><div class="ftitle">Worldwide shipping</div><div class="fdesc">Available on Amazon internationally. Ships from Spain. Your Aqua Mouse gets to you wherever you are.</div></div>
+      <div class="fcard"><div class="ficon">🎁</div><div class="ftitle">The perfect gift</div><div class="fdesc">For Y2K fans, Frutiger Aero collectors, or anyone who wants a desk setup that starts conversations.</div></div>
     </div>
   </section>
 
@@ -583,6 +595,13 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
     <button class="cacc" onclick="acceptCookies()">Got it</button>
     <button class="cdec" onclick="acceptCookies()">Essential only</button>
   </div>
+</div>
+
+<!-- Lightbox for Hall of Fame images -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="lb-close">×</span>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+  <div id="lb-caption"></div>
 </div>
 
 <!-- Legal modal -->
@@ -743,6 +762,32 @@ function acceptCookies(){
 (function(){
   try{ if(localStorage.getItem('fas_cookie_ok')==='1'){ document.getElementById('cookie').classList.add('hide'); } }catch(e){}
 })();
+
+// Lightbox for Hall of Fame + gallery images
+function openLightbox(src, caption){
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-caption').textContent = caption || '';
+  document.getElementById('lightbox').classList.add('show');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('show');
+}
+// Auto-wire all Hall of Fame images and gallery images
+document.querySelectorAll('.hofi').forEach(function(img){
+  img.addEventListener('click', function(){
+    const card = img.closest('.hofc');
+    const name = card ? (card.querySelector('.hofn')||{}).textContent : img.alt;
+    openLightbox(img.src, name || img.alt);
+  });
+});
+document.querySelectorAll('#galgrid .gc img').forEach(function(img){
+  img.addEventListener('click', function(){
+    const card = img.closest('.gc');
+    const name = card ? (card.querySelector('.gct')||{}).textContent : img.alt;
+    openLightbox(img.src, name || img.alt);
+  });
+});
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
 
 // Legal modals
 const LEGAL = {
