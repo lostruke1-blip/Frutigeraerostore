@@ -4,15 +4,35 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>FrutigerAeroStore — Aqua Mouse | Wireless Liquid Mouse with Floating Clownfish</title>
-<meta name="description" content="The Aqua Mouse: a wireless mouse with real liquid and a floating clownfish inside. Bluetooth + 2.4G, RGB glow, USB-C. Frutiger Aero / Y2K aesthetic. Designed in Spain, shipped worldwide via Amazon." />
+<meta name="description" content="The Aqua Mouse: a wireless mouse with real liquid and a floating clownfish inside. Bluetooth + 2.4G, RGB glow, USB-C. Frutiger Aero / Y2K aesthetic. Designed in Spain, available on Amazon." />
 <meta name="keywords" content="aqua mouse, frutiger aero, liquid mouse, clownfish mouse, y2k mouse, wireless aqua mouse, frutigeraerostore" />
 <meta property="og:title" content="FrutigerAeroStore — Aqua Mouse" />
 <meta property="og:description" content="Wireless mice with real liquid & a floating clownfish. The ultimate Frutiger Aero desk accessory." />
 <meta property="og:type" content="website" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<meta property="og:url" content="https://frutigeraerostore.com/" />
+<meta property="og:image" content="https://frutigeraerostore.com/img/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#4cb8ff" />
+<link rel="canonical" href="https://frutigeraerostore.com/" />
+<link rel="icon" type="image/png" href="img/favicon.png" />
+<link rel="apple-touch-icon" href="img/favicon.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"FrutigerAeroStore","url":"https://frutigeraerostore.com/","logo":"https://frutigeraerostore.com/img/favicon.png","sameAs":["https://www.instagram.com/frutigeraerostore","https://www.tiktok.com/@frutigeraerostore"]},
+{"@type":"ItemList","name":"Aqua Mouse Collection","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Clown Fish Aqua Mouse","url":"https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20"},
+{"@type":"ListItem","position":2,"name":"Penguin Aqua Mouse","url":"https://www.amazon.com/dp/B0DS2RVQD5?tag=fastore0bd8-20"},
+{"@type":"ListItem","position":3,"name":"Pencil Holder Clown Fish","url":"https://www.amazon.com/dp/B0GT59RJ3H?tag=fastore0bd8-20"}]}]}
+</script>
+<link rel="preload" href="fonts/nunito-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-900.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/nunito-400.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/nunito-700.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/nunito-800.woff2') format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:900;font-display:swap;src:url('fonts/nunito-900.woff2') format('woff2')}
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Nunito',sans-serif;-webkit-font-smoothing:antialiased}
 html{scroll-behavior:smooth}
 body{overflow-x:hidden;width:100%}
@@ -30,7 +50,6 @@ body{overflow-x:hidden;width:100%}
 .bub{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,0.95);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,0.98) 0%,rgba(180,240,255,0.4) 35%,rgba(140,220,255,0.15) 100%);animation:bubup linear infinite;pointer-events:none;z-index:3;box-shadow:0 0 15px rgba(255,255,255,0.4)}
 @keyframes bubup{0%{transform:translateY(0) translateX(0) scale(1);opacity:0.85}30%{transform:translateY(-30vh) translateX(20px) scale(1.08);opacity:1}70%{transform:translateY(-65vh) translateX(-15px) scale(0.95);opacity:0.6}100%{transform:translateY(-100vh) translateX(5px) scale(0.85);opacity:0}}
 
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 6vw;background:rgba(255,255,255,0.32);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1.5px solid rgba(255,255,255,0.5)}
 .navlg{display:flex;align-items:center;gap:10px;text-decoration:none}
 .navlg img{width:46px;height:46px;border-radius:12px;object-fit:cover;object-position:center;box-shadow:0 4px 12px rgba(0,100,180,0.2)}
 .navbr{font-size:15px;font-weight:900;background:linear-gradient(135deg,#0066cc,#00b070);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;letter-spacing:-.3px}
@@ -87,19 +106,20 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .tdd{width:5px;height:5px;border-radius:50%;background:#00bb88;display:inline-block;box-shadow:0 0 6px #00bb88}
 
 /* REST */
-#rest{position:relative;background:linear-gradient(180deg,#bff0ff 0%,#daf8e0 8%,#9fe070 22%,#5ec530 38%,#3ab820 60%,#2a9018 80%,#1d7510 100%);overflow:hidden}
+#rest{position:relative;overflow:hidden}
 .bub2{position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,0.85);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,0.95) 0%,rgba(180,240,255,0.3) 40%,rgba(100,210,255,0.1) 100%);animation:bub2anim linear infinite;pointer-events:none}
 @keyframes bub2anim{0%{transform:translateY(0) scale(1);opacity:.7}50%{transform:translateY(-45px) translateX(8px) scale(1.06);opacity:.9}100%{transform:translateY(-95px) translateX(-4px) scale(.9);opacity:.4}}
-section{position:relative;z-index:5;padding:60px 6vw;max-width:1200px;margin:0 auto}
+#rest section{position:relative;z-index:5;padding:70px 6vw;max-width:1200px;margin:0 auto}
 .ey{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#006650;margin-bottom:7px;text-align:center;text-shadow:0 1px 4px rgba(255,255,255,0.8)}
 h2{font-size:30px;font-weight:900;color:#002233;letter-spacing:-.8px;line-height:1.2;text-align:center;margin-bottom:34px;text-shadow:0 2px 8px rgba(255,255,255,0.65)}
 
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .pcard{background:rgba(255,255,255,0.7);backdrop-filter:blur(16px);border:1.5px solid rgba(255,255,255,0.95);border-radius:24px;overflow:hidden;transition:all .25s;box-shadow:0 6px 22px rgba(0,140,200,.1)}
 .pcard:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,140,200,.22)}
-.pi{height:210px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.pi img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .35s;padding:18px}
-.pcard:hover .pi img{transform:scale(1.08) rotate(-3deg)}
+.pi{height:250px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pi img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s}
+.pi img.fit{object-fit:contain;padding:10px}
+.pcard:hover .pi img{transform:scale(1.06)}
 .pb{padding:18px 20px 20px}
 .ptag{display:inline-block;background:linear-gradient(135deg,rgba(0,195,175,.18),rgba(0,200,200,.13));color:#006655;font-size:9px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px;border:1px solid rgba(0,175,155,.3)}
 .pname{font-size:15.5px;font-weight:900;color:#002233;margin-bottom:6px;line-height:1.2}
@@ -209,10 +229,7 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   .ring{width:300px;height:300px}.ring2{width:240px;height:240px}
 }
 @media(max-width:768px){
-  nav{padding:12px 5vw}
-  .navlks li:not(:last-child){display:none}
   .navbr{font-size:13px}.navsb{font-size:8.5px}.navlg img{width:38px;height:38px}
-  .navcta{padding:8px 16px;font-size:11px!important}
   #hcont{padding:30px 6vw 10px}
   #hero{min-height:auto;padding-bottom:64px}
   #hcont h1{font-size:30px;letter-spacing:-1.2px;margin-bottom:14px}
@@ -262,8 +279,6 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   .modbox h3{font-size:19px}
 }
 @media(max-width:480px){
-  .navlks{display:none}.navlks li:last-child{display:block}
-  nav{padding:11px 5vw}
   #hcont{padding:24px 6vw 6px}
   #hcont h1{font-size:25px;letter-spacing:-1px}
   .badge{font-size:9px;letter-spacing:.6px;padding:5px 12px}
@@ -291,9 +306,157 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   .fti{grid-template-columns:1fr;gap:22px}
   .fti > div:first-child{grid-column:auto}
 }
+
+/* ============ 2026 REFRESH ============ */
+:focus-visible{outline:3px solid #00bcd4;outline-offset:3px;border-radius:8px}
+#hero{padding:0 0 60px}
+
+/* Floating glass nav */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));z-index:200;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 12px 9px 14px;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.78) 0%,rgba(255,255,255,.42) 48%,rgba(235,250,255,.5) 100%);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border:1.5px solid rgba(255,255,255,.9);box-shadow:0 12px 34px rgba(0,90,160,.2),inset 0 1px 0 #fff,inset 0 -8px 14px rgba(0,160,220,.08);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 14px 40px rgba(0,60,110,.3),inset 0 1px 0 #fff,inset 0 -8px 14px rgba(0,160,220,.08)}
+.navr{display:flex;align-items:center;gap:8px}
+.navlks a{padding:8px 12px;border-radius:999px;transition:background .2s,color .2s}
+.navlks a:hover{background:rgba(255,255,255,.7)}
+.navlks{gap:4px}
+.navcta{font-size:12.5px;font-weight:800;text-decoration:none;white-space:nowrap}
+.navtg{display:none;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.95);background:rgba(255,255,255,.7);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+.navtg span{display:block;width:16px;height:2px;border-radius:2px;background:#005577;transition:transform .25s,opacity .25s}
+nav.open .navtg span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+nav.open .navtg span:nth-child(2){opacity:0}
+nav.open .navtg span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+#hero{display:flex;flex-direction:column}
+#hcont{flex:1;width:100%;max-width:1280px;padding-top:130px;gap:50px;grid-template-columns:1.2fr 1fr}
+#hcont h1{font-size:clamp(34px,4.3vw,60px);letter-spacing:-2px;margin-bottom:22px}
+.hsub{font-size:17px;max-width:500px;margin-bottom:34px}
+.bp,.bg2{font-size:15.5px;padding:16px 30px}
+.badge{font-size:11px;margin-bottom:22px}
+#stage{height:auto;flex-direction:column;gap:20px;padding-bottom:10px}
+.orbwrap{position:relative;width:min(440px,76vw);aspect-ratio:1;perspective:900px}
+.orb{position:absolute;inset:0;z-index:5;border-radius:50%;overflow:hidden;border:6px solid rgba(255,255,255,.9);box-shadow:0 34px 70px rgba(0,100,180,.38),0 0 0 14px rgba(255,255,255,.2),0 0 90px rgba(120,230,255,.55);animation:orbfl 6s ease-in-out infinite;transform:translateY(var(--fy,0)) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out;will-change:transform}
+@keyframes orbfl{0%,100%{--fy:0px}50%{--fy:-12px}}
+@property --fy{syntax:'<length>';inherits:false;initial-value:0px}
+.orb img{width:100%;height:100%;object-fit:cover;object-position:44% 52%;transform:scale(1.12);display:block}
+.orb::after{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse 62% 36% at 34% 12%,rgba(255,255,255,.78),rgba(255,255,255,0) 70%),radial-gradient(ellipse 46% 16% at 62% 95%,rgba(255,255,255,.34),rgba(255,255,255,0) 70%);box-shadow:inset 0 -22px 44px rgba(0,120,200,.28),inset 0 10px 24px rgba(255,255,255,.5);pointer-events:none}
+#canvas3d{position:absolute;inset:-12%;width:124%;height:124%;z-index:5}
+#canvas3d[hidden],#loader3d[hidden],.orb[hidden]{display:none}
+.ring{width:118%;height:118%}.ring2{width:96%;height:96%}
+.ft{font-size:12px;padding:9px 15px;background:linear-gradient(180deg,#fff,rgba(235,250,255,.9))}
+.ft1{top:2%;right:-9%;left:auto;bottom:auto}
+.ft4{top:14%;left:-13%;right:auto;bottom:auto}
+.ft3{top:50%;left:-19%;right:auto;bottom:auto}
+.ft2{bottom:7%;left:-9%;top:auto;right:auto}
+#pmini{position:relative;left:auto;bottom:auto;transform:none;display:block;text-decoration:none;transition:transform .2s,box-shadow .2s}
+#pmini:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,140,200,.28)}
+#v3d{background:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.95);color:#005577;font-size:12px;font-weight:800;padding:8px 16px;border-radius:999px;cursor:pointer;backdrop-filter:blur(8px);letter-spacing:.3px;transition:background .2s;z-index:8}
+#v3d:hover{background:rgba(255,255,255,.95)}
+.pi{height:280px}
+.hofc{align-items:stretch}
+.hofi{height:auto;min-height:220px;align-self:stretch}
+.ftg,.ftlk a{color:#7fb6c6}.ftcp{color:#6aa2b3}.ftdisc{color:#5b93a4}.fts{color:#8cc3d2}
+
+/* Aero gloss: the wet highlight on every pill button */
+.bp,.pbuy,.navcta,.gtb.act,.bw,.cacc{position:relative;overflow:hidden;isolation:isolate}
+.bp::before,.pbuy::before,.navcta::before,.gtb.act::before,.bw::before,.cacc::before{content:'';position:absolute;left:4%;right:4%;top:2px;height:48%;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.06));pointer-events:none;z-index:-1}
+.bp,.pbuy,.navcta{background:linear-gradient(180deg,#22d3e6 0%,#00b4cf 48%,#00a58c 100%)!important;border:1px solid rgba(0,120,140,.35);text-shadow:0 1px 2px rgba(0,70,90,.45)!important}
+.bp::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite;z-index:-1}
+@keyframes shine{0%,55%{left:-60%}85%,100%{left:130%}}
+
+/* Glass cards with a top highlight */
+.pcard,.hofc,.fcard,.gc,.rcd{background:linear-gradient(180deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.7) 100%);box-shadow:0 10px 30px rgba(0,90,150,.14),inset 0 1px 0 #fff}
+.fcard,.rcd{position:relative;overflow:hidden}
+.fcard::before,.rcd::before{content:'';position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0));pointer-events:none}
+.fcard>*,.rcd>*{position:relative}
+.ficon{width:52px;height:52px;border-radius:50%;font-size:24px;background:radial-gradient(circle at 32% 26%,#fff 0%,#dff8ff 38%,#9fe4f5 100%);border:1.5px solid rgba(255,255,255,.95);box-shadow:0 6px 16px rgba(0,140,200,.25),inset 0 -6px 10px rgba(0,150,210,.18)}
+.pname{font-size:17px}.pdesc{font-size:12.5px}.fdesc,.hofst{font-size:12.5px}.ftitle{font-size:15.5px}
+.plink{font-size:11.5px;font-weight:800;color:#0088a0;text-decoration:none;white-space:nowrap}
+.plink:hover{text-decoration:underline}
+.pprice{font-size:11.5px;font-weight:800;color:#0088a0}
+
+/* Bands: sky → ocean → shore → meadow */
+.band{position:relative}
+.b-sky{background:linear-gradient(180deg,#c9f2ff 0%,#eafbff 55%,#d6f6ff 100%)}
+.b-deep{background:radial-gradient(120% 60% at 50% 0%,rgba(120,225,255,.55) 0%,rgba(120,225,255,0) 60%),linear-gradient(180deg,#12aee8 0%,#0a84d6 38%,#075bb0 72%,#06438f 100%)}
+.b-deep::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(105deg,rgba(255,255,255,.07) 0 26px,transparent 26px 90px);-webkit-mask-image:linear-gradient(180deg,#000,transparent 55%);mask-image:linear-gradient(180deg,#000,transparent 55%);animation:caustic 14s linear infinite;pointer-events:none}
+@keyframes caustic{0%{background-position:0 0}100%{background-position:180px 0}}
+.b-deep .ey{color:#c9f6ff;text-shadow:none}
+.b-deep h2,.b-deep .lead{color:#fff;text-shadow:0 2px 14px rgba(0,40,90,.45)}
+.lead{text-align:center;font-size:14.5px;line-height:1.6;color:#335566;margin:-22px auto 34px;max-width:620px}
+.b-aqua{background:linear-gradient(180deg,#eafcff 0%,#d4f7f0 100%)}
+.b-grass{background:linear-gradient(180deg,#d4f7f0 0%,#b9ee8f 22%,#7dd848 55%,#4fbf2a 100%)}
+.b-meadow{background:linear-gradient(180deg,#4fbf2a 0%,#3aa822 50%,#2c8f1b 100%);padding-bottom:50px}
+.b-meadow .ey{color:#eaffd9;text-shadow:none}
+.b-meadow h2{color:#fff;text-shadow:0 2px 12px rgba(0,60,10,.4)}
+.wave{display:block;width:100%;height:70px;margin-bottom:-1px}
+.wave.flip{transform:scaleY(-1);margin:-1px 0 0}
+h2{font-size:clamp(26px,3.4vw,38px)}
+.ey{font-size:11.5px}
+
+/* Reviews → real Amazon reviews */
+.rcd{display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .2s,box-shadow .2s;padding:22px}
+.rcd:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,60,20,.25),inset 0 1px 0 #fff}
+.rcd .rn{font-size:15.5px;font-weight:900}
+.rcd .rtx{font-style:normal;font-size:12.5px;margin:0}
+.rcd .rgo{font-size:12px;font-weight:800;color:#0088a0;margin-top:4px}
+
+/* Scroll reveal */
+.rv{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+@media(max-width:900px){
+  #hcont{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  nav{top:10px;padding:7px 8px 7px 10px}
+  .navtg{display:flex}
+  .navlks{position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;padding:10px;border-radius:24px;background:rgba(255,255,255,.96);border:1.5px solid #fff;box-shadow:0 18px 40px rgba(0,70,120,.28);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s,transform .2s,visibility .2s}
+  nav.open .navlks{opacity:1;visibility:visible;transform:none}
+  .navlks a{display:block;padding:13px 16px;font-size:15px;text-align:center}
+  .navcta{padding:9px 16px!important;font-size:12px}
+  #hcont{padding-top:100px;gap:26px}
+  #hcont h1{font-size:34px;letter-spacing:-1.3px}
+  .hsub{font-size:14.5px;margin-bottom:24px}
+  .bp,.bg2{font-size:14.5px;padding:14px 26px}
+  .ft{font-size:10px;padding:6px 11px}
+  .ft1{right:-5%}.ft4{left:-7%}.ft3{left:-10%}.ft2{left:-5%}
+  .hofi{min-height:0;height:230px}
+  #rest section{padding:50px 6vw}
+  .wave{height:40px}
+  .pi{height:260px}
+  .lead{font-size:13.5px;margin-top:-16px}
+}
+@media(max-width:480px){
+  #hcont{padding-top:92px}
+  #hcont h1{font-size:30px}
+  .navsb{display:none}
+}
 </style>
 </head>
 <body>
+
+<nav id="nav">
+  <a class="navlg" href="#hero">
+    <img src="img/logo.jpg" alt="FrutigerAeroStore logo" width="46" height="46" />
+    <div>
+      <div class="navbr">FrutigerAeroStore</div>
+      <div class="navsb">Aqua Mouse · Y2K Aesthetic</div>
+    </div>
+  </a>
+  <ul class="navlks" id="navlks">
+    <li><a href="#products">Shop</a></li>
+    <li><a href="#hof">Hall of Fame</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+  <div class="navr">
+    <a href="https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="navcta">Buy Now</a>
+    <button class="navtg" id="navtg" aria-label="Menu" aria-expanded="false" aria-controls="navlks"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 
 <section id="hero">
   <div class="sun"></div>
@@ -302,21 +465,6 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
   <div class="cloud" style="width:150px;height:30px;top:4%;left:-200px;animation-duration:40s;animation-delay:12s;opacity:.9"></div>
   <div class="cloud" style="width:80px;height:18px;top:22%;left:-100px;animation-duration:28s;animation-delay:18s;opacity:.8"></div>
 
-  <nav>
-    <a class="navlg" href="#hero">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/Yyv922oLjJu31o3o/photo_2026-04-03_15-11-05-2-NHvrc9wAeA6ZZNQE.jpg" alt="FrutigerAeroStore logo" />
-      <div>
-        <div class="navbr">FrutigerAeroStore</div>
-        <div class="navsb">Aqua Mouse · Y2K Aesthetic</div>
-      </div>
-    </a>
-    <ul class="navlks">
-      <li><a href="#products">Shop</a></li>
-      <li><a href="#hof">Hall of Fame</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="navcta">Buy Now</a></li>
-    </ul>
-  </nav>
 
   <div id="hcont">
     <div>
@@ -324,24 +472,27 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
       <h1>The <em>Aqua Mouse</em> bringing 2006 to your desk</h1>
       <p class="hsub">Wireless mice with real liquid &amp; a floating clownfish. Bluetooth + 2.4G dual mode. RGB lighting. For people who miss Windows Vista — and aren't ashamed of it.</p>
       <div class="hbtns">
-        <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="bp">Shop on Amazon ↗</a>
+        <a href="https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="bp">Shop on Amazon ↗</a>
         <a href="#hof" class="bg2">Hall of Fame</a>
       </div>
     </div>
     <div id="stage">
-      <div class="ring"></div>
-      <div class="ring2"></div>
-      <canvas id="canvas3d"></canvas>
-      <div id="loader3d"><div class="spin"></div><div class="ltxt">Loading 3D model…</div></div>
-      <div class="ft ft1">🫧 Real liquid</div>
-      <div class="ft ft2">📶 Dual Wireless</div>
-      <div class="ft ft3">💡 RGB Glow</div>
-      <div class="ft ft4">🐠 Clownfish inside</div>
-      <div id="pmini">
-        <div class="pn">Clown Fish Aqua Mouse</div>
-        <div class="pp">$29.99 <s>$39.99</s> · ★★★★★</div>
+      <div class="orbwrap" id="orbwrap">
+        <div class="ring"></div>
+        <div class="ring2"></div>
+        <div class="orb" id="orb"><img src="img/clownfish_mouse.jpg" alt="Clown Fish Aqua Mouse held in a hand: blue liquid with a floating clownfish" width="1100" height="1100" fetchpriority="high" /></div>
+        <canvas id="canvas3d" hidden></canvas>
+        <div id="loader3d" hidden><div class="spin"></div><div class="ltxt">Loading 3D model…</div></div>
+        <div class="ft ft1">🫧 Real liquid</div>
+        <div class="ft ft2">📶 Dual Wireless</div>
+        <div class="ft ft3">💡 RGB Glow</div>
+        <div class="ft ft4">🐠 Clownfish inside</div>
       </div>
-      <div id="draghint">↔ Drag to rotate</div>
+      <a id="pmini" href="https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">
+        <div class="pn">Clown Fish Aqua Mouse</div>
+        <div class="pp">See today's price on Amazon ↗</div>
+      </a>
+      <button id="v3d" type="button" aria-pressed="false">↻ Spin it in 3D</button>
     </div>
   </div>
 
@@ -366,65 +517,63 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
 </div>
 
 <div id="rest">
-  <div class="bub2" style="width:18px;height:18px;left:8%;top:18%;animation-duration:7s"></div>
-  <div class="bub2" style="width:12px;height:12px;left:18%;top:48%;animation-duration:9s;animation-delay:1.5s"></div>
-  <div class="bub2" style="width:24px;height:24px;left:88%;top:25%;animation-duration:8s;animation-delay:2s"></div>
-  <div class="bub2" style="width:14px;height:14px;left:72%;top:65%;animation-duration:6s;animation-delay:.8s"></div>
-  <div class="bub2" style="width:20px;height:20px;left:42%;top:80%;animation-duration:7.5s;animation-delay:3s"></div>
-
+  <div class="band b-sky">
   <section id="products">
     <div class="ey">Our Products</div>
     <h2>Shop the Aqua Mouse Collection</h2>
     <div class="pgrid">
       <div class="pcard">
         <div class="pi" style="background:linear-gradient(135deg,#d5f5ff,#c0f0e8)">
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Clown Fish Aqua Mouse" loading="lazy" />
+          <img src="img/clownfish_mouse.jpg" alt="Clown Fish Aqua Mouse" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">⭐ Best seller</span>
           <div class="pname">Clown Fish Aqua Mouse</div>
           <div class="pdesc">Blue liquid + floating clownfish. Bluetooth &amp; 2.4G dual mode, USB-C rechargeable, RGB glow.</div>
           <div class="pfooter">
-            <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="pbuy">Buy on Amazon ↗</a>
-            <span class="pstars">★★★★★</span>
+            <a href="https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="pbuy">Buy on Amazon ↗</a>
+            <a class="plink" href="https://www.amazon.com/product-reviews/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">Read reviews →</a>
           </div>
         </div>
       </div>
       <div class="pcard">
-        <div class="pi" style="background:linear-gradient(135deg,#ede0ff,#d8eeff)">
-          <img src="img/penguin_mouse.jpg" alt="Penguin Aqua Mouse" loading="lazy" />
+        <div class="pi" style="background:#fff">
+          <img class="fit" src="img/penguin_mouse.jpg" alt="Penguin Aqua Mouse" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">🐧 Fan favorite</span>
           <div class="pname">Penguin Aqua Mouse</div>
           <div class="pdesc">Purple liquid with a penguin figurine. 2.4G wireless, AA battery. Full Y2K energy.</div>
           <div class="pfooter">
-            <a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" rel="noopener" class="pbuy">Buy on Amazon ↗</a>
-            <span class="pstars">★★★★★</span>
+            <a href="https://www.amazon.com/dp/B0DS2RVQD5?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="pbuy">Buy on Amazon ↗</a>
+            <a class="plink" href="https://www.amazon.com/product-reviews/B0DS2RVQD5?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">Read reviews →</a>
           </div>
         </div>
       </div>
       <div class="pcard">
         <div class="pi" style="background:linear-gradient(135deg,#d5f5ff,#c0eedf)">
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/phototaken001kifres-3kD3VDtXHG9UVLql.png" alt="Pencil Holder Clown Fish" loading="lazy" />
+          <img src="img/pencil_holder.jpg" alt="Pencil Holder Clown Fish" loading="lazy" />
         </div>
         <div class="pb">
           <span class="ptag">🆕 New</span>
           <div class="pname">Pencil Holder Clown Fish</div>
           <div class="pdesc">Liquid-filled desk organiser with two floating clownfish. No power needed.</div>
           <div class="pfooter">
-            <a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" rel="noopener" class="pbuy">Buy on Amazon ↗</a>
-            <span class="pstars">★★★★☆</span>
+            <a href="https://www.amazon.com/dp/B0GT59RJ3H?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="pbuy">Buy on Amazon ↗</a>
+            <a class="plink" href="https://www.amazon.com/product-reviews/B0GT59RJ3H?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">Read reviews →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="hof" style="padding-top:0">
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="#12aee8" d="M0,38 C180,70 360,4 560,30 C760,56 900,66 1100,34 C1260,10 1360,22 1440,40 L1440,70 L0,70 Z"/></svg>
+  </div>
+  <div class="band b-deep">
+  <section id="hof">
     <div class="ey">Aqua Mouse History</div>
     <h2>🏆 Aqua Mouse Hall of Fame</h2>
-    <p style="text-align:center;font-size:13px;color:#335566;margin-top:-22px;margin-bottom:30px;max-width:620px;margin-left:auto;margin-right:auto;text-shadow:0 1px 4px rgba(255,255,255,0.7)">These mice lived in our store and are now sold. Each one is a piece of liquid mouse history — proof that the aqua aesthetic has been with us all along.</p>
+    <p class="lead">These mice lived in our store and are now sold. Each one is a piece of liquid mouse history — proof that the aqua aesthetic has been with us all along.</p>
     <div class="hofg">
       <div class="hofc">
         <img class="hofi" src="img/fluvi.jpg" alt="Fluvi Mouse" loading="lazy" />
@@ -469,7 +618,10 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
     </div>
   </section>
 
-  <section style="padding-top:0">
+  </div>
+  <div class="band b-aqua">
+  <svg class="wave flip" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="#06438f" d="M0,38 C180,70 360,4 560,30 C760,56 900,66 1100,34 C1260,10 1360,22 1440,40 L1440,70 L0,70 Z"/></svg>
+  <section id="why">
     <div class="ey">Why choose us</div>
     <h2>Obsessively designed, genuinely unique</h2>
     <div class="fgrid">
@@ -477,35 +629,36 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
       <div class="fcard"><div class="ficon">📶</div><div class="ftitle">Bluetooth + 2.4G dual</div><div class="fdesc">Switch instantly between Bluetooth and 2.4G USB. Works on Windows, Mac &amp; Android with zero setup.</div></div>
       <div class="fcard"><div class="ficon">💡</div><div class="ftitle">Multicolour RGB glow</div><div class="fdesc">Built-in LED that cycles through colours. The liquid amplifies the light for a mesmerising aquarium effect.</div></div>
       <div class="fcard"><div class="ficon">🔋</div><div class="ftitle">USB-C rechargeable</div><div class="fdesc">Full charge in under 2 hours. Modern internals wrapped in a beautifully nostalgic shell.</div></div>
-      <div class="fcard"><div class="ficon">🌍</div><div class="ftitle">Worldwide shipping</div><div class="fdesc">Available on Amazon internationally. Ships from Spain. Your Aqua Mouse gets to you wherever you are.</div></div>
+      <div class="fcard"><div class="ficon">📦</div><div class="ftitle">Fulfilled by Amazon</div><div class="fdesc">Sold on Amazon.com and shipped by Amazon — fast delivery and easy returns.</div></div>
       <div class="fcard"><div class="ficon">🎁</div><div class="ftitle">The perfect gift</div><div class="fdesc">For Y2K fans, Frutiger Aero collectors, or anyone who wants a desk setup that starts conversations.</div></div>
     </div>
   </section>
 
-  <section id="gallery" style="padding-top:0">
+  </div>
+  <div class="band b-grass">
+  <section id="gallery">
     <div class="ey">Frutiger Aero Universe</div>
     <h2>Gallery &amp; curiosities</h2>
     <div class="galt">
       <button class="gtb act" onclick="filterGal('all',this)">All</button>
       <button class="gtb" onclick="filterGal('product',this)">Products</button>
-      <button class="gtb" onclick="filterGal('rgb',this)">RGB &amp; Glow</button>
       <button class="gtb" onclick="filterGal('hof',this)">Hall of Fame</button>
     </div>
     <div class="ggr" id="galgrid">
       <div class="gc" data-cat="product">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=639,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Clown Fish Aqua Mouse" style="object-fit:contain;background:#d5f5ff;padding:8px" loading="lazy" />
+        <img src="img/clownfish_mouse.jpg" alt="Clown Fish Aqua Mouse" loading="lazy" />
         <div class="gcb"><div class="gct">Clown Fish Aqua Mouse</div><div class="gcs">The original — clear blue liquid &amp; clownfish inside.</div></div>
       </div>
-      <div class="gc" data-cat="rgb">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/Yyv922oLjJu31o3o/phototaken001kifres-3kD3VDtXHG9UVLql.png" alt="RGB green glow" loading="lazy" />
-        <div class="gcb"><div class="gct">RGB green glow</div><div class="gcs">Teal LED — liquid amplifies the light beautifully.</div></div>
-      </div>
-      <div class="gc" data-cat="rgb">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/Yyv922oLjJu31o3o/aquamousenhanced-90Y8Ae1zvSaMkMgQ.png" alt="Blue RGB mode" loading="lazy" />
-        <div class="gcb"><div class="gct">Blue RGB mode</div><div class="gcs">Deep blue LED — the fish floats like in a real aquarium.</div></div>
+      <div class="gc" data-cat="product">
+        <img src="img/pencil_holder.jpg" alt="Pencil Holder Clown Fish" loading="lazy" />
+        <div class="gcb"><div class="gct">Pencil Holder Clown Fish</div><div class="gcs">Two clownfish drifting under your pens. No power needed.</div></div>
       </div>
       <div class="gc" data-cat="product">
-        <img src="img/penguin_mouse.jpg" alt="Penguin Aqua Mouse" style="object-fit:contain;background:#ede0ff;padding:8px" loading="lazy" />
+        <img src="img/clownfish_mouse.jpg" alt="Clownfish close-up" style="object-position:60% 62%" loading="lazy" />
+        <div class="gcb"><div class="gct">Clownfish close-up</div><div class="gcs">The fish floats freely — tilt the mouse and it swims.</div></div>
+      </div>
+      <div class="gc" data-cat="product">
+        <img src="img/penguin_mouse.jpg" alt="Penguin Aqua Mouse" style="object-fit:contain;background:#fff" loading="lazy" />
         <div class="gcb"><div class="gct">Penguin Aqua Mouse</div><div class="gcs">Purple edition with a penguin figurine.</div></div>
       </div>
       <div class="gc" data-cat="hof">
@@ -519,67 +672,71 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <div class="ey">Community</div>
-    <h2>What our customers say</h2>
+  </div>
+  <div class="band b-meadow">
+  <section id="reviews">
+    <div class="ey">Reviews</div>
+    <h2>Don't take our word for it</h2>
     <div class="rgr">
-      <div class="rcd">
-        <div class="rst">★★★★★</div>
-        <div class="rtx">"The most beautiful mouse I've ever owned. Everyone in the office asks about it. Shipped super fast to the UK."</div>
-        <div class="rau"><div class="rav" style="background:linear-gradient(135deg,#00cce8,#00aa88)">SC</div><div><div class="rn">Sarah C.</div><div class="rh">@sarahcore · TikTok</div></div></div>
-      </div>
-      <div class="rcd">
-        <div class="rst">★★★★★</div>
-        <div class="rtx">"Ordered the Penguin Mouse for my Y2K setup and it exceeded every expectation. 10/10."</div>
-        <div class="rau"><div class="rav" style="background:linear-gradient(135deg,#aa44ff,#6644dd)">JM</div><div><div class="rn">Jake M.</div><div class="rh">@frutigervibes · Instagram</div></div></div>
-      </div>
-      <div class="rcd">
-        <div class="rst">★★★★★</div>
-        <div class="rtx">"I own both the clownfish and penguin mouse now. Everything about this store screams early 2000s optimism."</div>
-        <div class="rau"><div class="rav" style="background:linear-gradient(135deg,#ff6699,#cc3366)">AL</div><div><div class="rn">Ana L.</div><div class="rh">@y2kcore · Twitter</div></div></div>
-      </div>
+      <a class="rcd" href="https://www.amazon.com/product-reviews/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">
+        <div class="rn">Clown Fish Aqua Mouse</div>
+        <div class="rtx">Every review is from a verified Amazon buyer — photos, ratings and the honest bits included.</div>
+        <div class="rgo">Read reviews on Amazon ↗</div>
+      </a>
+      <a class="rcd" href="https://www.amazon.com/product-reviews/B0DS2RVQD5?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">
+        <div class="rn">Penguin Aqua Mouse</div>
+        <div class="rtx">See what buyers say about the purple one before you pick a side.</div>
+        <div class="rgo">Read reviews on Amazon ↗</div>
+      </a>
+      <a class="rcd" href="https://www.amazon.com/product-reviews/B0GT59RJ3H?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">
+        <div class="rn">Pencil Holder Clown Fish</div>
+        <div class="rtx">Real desks, real photos, straight from Amazon customers.</div>
+        <div class="rgo">Read reviews on Amazon ↗</div>
+      </a>
     </div>
   </section>
 
   <div class="ctas">
     <div class="ctt">Ready for your Aqua Mouse?</div>
-    <div class="ctsb">Available on Amazon worldwide. International shipping. The most Y2K accessory for your setup is waiting.</div>
+    <div class="ctsb">Available on Amazon.com. The most Y2K accessory for your setup is waiting.</div>
     <div class="ctbs">
-      <a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener" class="bw">Clownfish Mouse ↗</a>
-      <a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" rel="noopener" class="bow">Penguin Mouse ↗</a>
+      <a href="https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="bw">Clownfish Mouse ↗</a>
+      <a href="https://www.amazon.com/dp/B0DS2RVQD5?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored" class="bow">Penguin Mouse ↗</a>
     </div>
+  </div>
+
   </div>
 
   <footer>
     <div class="fti">
       <div>
         <div class="ftb">FrutigerAeroStore</div>
-        <div class="ftg">Retro-futuristic tech accessories.<br>Bringing Frutiger Aero to your desk since 2024.<br>Designed in Spain · Shipped worldwide.</div>
+        <div class="ftg">Retro-futuristic tech accessories.<br>Bringing Frutiger Aero to your desk since 2024.<br>Designed in Spain · Sold on Amazon.</div>
       </div>
       <div>
         <div class="ftct">Shop</div>
         <ul class="ftlk">
-          <li><a href="https://www.amazon.com/dp/B0GW5SXWSQ" target="_blank" rel="noopener">Aqua Mouse (Clownfish)</a></li>
-          <li><a href="https://www.amazon.com/dp/B0DS2RVQD5" target="_blank" rel="noopener">Aqua Mouse (Penguin)</a></li>
-          <li><a href="https://www.amazon.com/dp/B0GT59RJ3H" target="_blank" rel="noopener">Pencil Holder</a></li>
+          <li><a href="https://www.amazon.com/dp/B0GW5SXWSQ?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">Aqua Mouse (Clownfish)</a></li>
+          <li><a href="https://www.amazon.com/dp/B0DS2RVQD5?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">Aqua Mouse (Penguin)</a></li>
+          <li><a href="https://www.amazon.com/dp/B0GT59RJ3H?tag=fastore0bd8-20" target="_blank" rel="noopener sponsored">Pencil Holder</a></li>
         </ul>
       </div>
       <div>
         <div class="ftct">Info</div>
         <ul class="ftlk">
-          <li><a onclick="openModal('legal')">Legal Notice</a></li>
-          <li><a onclick="openModal('privacy')">Privacy &amp; Cookies</a></li>
-          <li><a onclick="openModal('affiliate')">Affiliate Disclosure</a></li>
+          <li><a href="#" role="button" onclick="openModal('legal');return false">Legal Notice</a></li>
+          <li><a href="#" role="button" onclick="openModal('privacy');return false">Privacy &amp; Cookies</a></li>
+          <li><a href="#" role="button" onclick="openModal('affiliate');return false">Affiliate Disclosure</a></li>
           <li><a href="#hof">Hall of Fame</a></li>
         </ul>
       </div>
     </div>
     <div class="ftbt">
-      <span class="ftcp">© 2025 FrutigerAeroStore · All rights reserved · Designed in Spain</span>
+      <span class="ftcp">© <span id="yr">2026</span> FrutigerAeroStore · All rights reserved · Designed in Spain</span>
       <div class="ftsl">
         <a href="https://www.instagram.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">IG</a>
-        <a href="https://tiktok.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">TK</a>
-        <a href="https://www.twitter.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">TW</a>
+        <a href="https://www.tiktok.com/@frutigeraerostore" target="_blank" rel="noopener" class="fts">TK</a>
+        <a href="https://x.com/frutigeraerostore" target="_blank" rel="noopener" class="fts">TW</a>
       </div>
     </div>
     <div class="ftdisc">
@@ -621,130 +778,176 @@ footer{position:relative;z-index:5;background:rgba(0,30,50,.93);backdrop-filter:
 }
 </script>
 <script type="module">
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+// The 3D viewer loads only when the visitor asks for it, so the page stays light.
+let started = null;
+window.start3D = () => started || (started = init3D());
 
-const canvas = document.getElementById('canvas3d');
-const stage = document.getElementById('stage');
-const loaderEl = document.getElementById('loader3d');
+async function init3D(){
+  const THREE = await import('three');
+  const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js');
+  const { MeshoptDecoder } = await import('three/addons/libs/meshopt_decoder.module.js');
+  const { RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js');
 
-const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.15;
+  const canvas = document.getElementById('canvas3d');
+  const loaderEl = document.getElementById('loader3d');
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-camera.position.set(0, 0, 6);
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.15;
 
-// Environment for nice reflections on the glossy mouse
-const pmrem = new THREE.PMREMGenerator(renderer);
-scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+  camera.position.set(0, 0, 6);
 
-// Lights
-scene.add(new THREE.AmbientLight(0xffffff, 0.5));
-const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(4,5,5); scene.add(key);
-const fill = new THREE.PointLight(0x00d4ff, 1.5, 30); fill.position.set(-4,-2,3); scene.add(fill);
-const rim = new THREE.PointLight(0x00ffa3, 1.2, 30); rim.position.set(0,4,-4); scene.add(rim);
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
-let model = null;
-let targetRY = 0, targetRX = 0, currentRY = 0, currentRX = 0;
-let userRY = 0, userRX = 0; // extra rotation from dragging
-let isDragging = false, lastX = 0, lastY = 0;
+  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(4,5,5); scene.add(key);
+  const fill = new THREE.PointLight(0x00d4ff, 1.5, 30); fill.position.set(-4,-2,3); scene.add(fill);
+  const rim = new THREE.PointLight(0x00ffa3, 1.2, 30); rim.position.set(0,4,-4); scene.add(rim);
 
-function sizeRenderer(){
-  const w = stage.clientWidth, h = stage.clientHeight;
-  renderer.setSize(w, h, false);
-  camera.aspect = w/h;
-  camera.updateProjectionMatrix();
-}
-sizeRenderer();
-window.addEventListener('resize', sizeRenderer);
+  let model = null;
+  let targetRY = 0, targetRX = 0, currentRY = 0, currentRX = 0;
+  let userRY = -0.6, userRX = 0.35;
+  let isDragging = false, lastX = 0, lastY = 0;
 
-// Load model
-const draco = new DRACOLoader();
-draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
-const gltfLoader = new GLTFLoader();
-gltfLoader.setDRACOLoader(draco);
-gltfLoader.setMeshoptDecoder(MeshoptDecoder);
-
-gltfLoader.load('3d/clownfish_mouse.glb', (gltf)=>{
-  model = gltf.scene;
-  // Center & scale
-  const box = new THREE.Box3().setFromObject(model);
-  const size = box.getSize(new THREE.Vector3());
-  const center = box.getCenter(new THREE.Vector3());
-  model.position.sub(center);
-  const maxDim = Math.max(size.x, size.y, size.z);
-  const scale = 2.7 / maxDim;
-  model.scale.setScalar(scale);
-  // Nice 3/4 starting angle (not side-on)
-  model.rotation.y = -0.6;
-  model.rotation.x = 0.35;
-  userRY = -0.6;
-  userRX = 0.35;
-  scene.add(model);
-  loaderEl.style.display = 'none';
-}, (xhr)=>{
-  if(xhr.total){
-    const pct = Math.round((xhr.loaded/xhr.total)*100);
-    loaderEl.querySelector('.ltxt').textContent = 'Loading 3D model… ' + pct + '%';
+  function sizeRenderer(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if(!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
   }
-}, (err)=>{
-  console.error('3D load error', err);
-  loaderEl.querySelector('.ltxt').textContent = '3D unavailable';
-  loaderEl.querySelector('.spin').style.display = 'none';
-});
+  sizeRenderer();
+  window.addEventListener('resize', sizeRenderer);
+  window.__resize3D = sizeRenderer;
 
-// Pointer parallax (tilt) — desktop only
-const isTouch = window.matchMedia('(hover: none)').matches;
-if(!isTouch){
-  window.addEventListener('mousemove', (e)=>{
-    if(isDragging) return;
-    const rect = stage.getBoundingClientRect();
-    const x = (e.clientX - (rect.left + rect.width/2)) / (rect.width/2);
-    const y = (e.clientY - (rect.top + rect.height/2)) / (rect.height/2);
-    targetRY = x * 0.45;
-    targetRX = y * 0.3;
+  const gltfLoader = new GLTFLoader();
+  gltfLoader.setMeshoptDecoder(MeshoptDecoder);
+  gltfLoader.load('3d/clownfish_mouse.glb', (gltf)=>{
+    model = gltf.scene;
+    const box = new THREE.Box3().setFromObject(model);
+    const size = box.getSize(new THREE.Vector3());
+    const center = box.getCenter(new THREE.Vector3());
+    model.position.sub(center);
+    model.scale.setScalar(2.7 / Math.max(size.x, size.y, size.z));
+    // The GLB ships as flat, unlit colour. Re-light it as glossy clear-coated plastic
+    // so it picks up reflections like the real shell.
+    model.traverse((o)=>{
+      if(!o.isMesh) return;
+      const tex = o.material.emissiveMap || o.material.map;
+      if(tex) tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+      o.material = new THREE.MeshPhysicalMaterial({
+        map: tex, color: 0xffffff,
+        emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0.38,
+        roughness: 0.16, metalness: 0,
+        clearcoat: 1, clearcoatRoughness: 0.05,
+        envMapIntensity: 1.35
+      });
+    });
+    const pivot = new THREE.Group(); pivot.add(model); scene.add(pivot); model = pivot;
+    loaderEl.hidden = true;
+  }, (xhr)=>{
+    if(xhr.total) loaderEl.querySelector('.ltxt').textContent = 'Loading 3D model… ' + Math.round((xhr.loaded/xhr.total)*100) + '%';
+  }, (err)=>{
+    console.error('3D load error', err);
+    loaderEl.querySelector('.ltxt').textContent = '3D unavailable';
+    loaderEl.querySelector('.spin').style.display = 'none';
   });
-}
 
-// Drag to rotate
-canvas.addEventListener('pointerdown', (e)=>{
-  isDragging = true; lastX = e.clientX; lastY = e.clientY; canvas.setPointerCapture(e.pointerId);
-});
-canvas.addEventListener('pointermove', (e)=>{
-  if(!isDragging) return;
-  userRY += (e.clientX - lastX) * 0.01;
-  userRX += (e.clientY - lastY) * 0.01;
-  userRX = Math.max(-0.8, Math.min(0.8, userRX));
-  lastX = e.clientX; lastY = e.clientY;
-});
-canvas.addEventListener('pointerup', ()=>{ isDragging=false; });
-canvas.addEventListener('pointercancel', ()=>{ isDragging=false; });
-
-const clock = new THREE.Clock();
-function animate(){
-  requestAnimationFrame(animate);
-  const t = clock.getElapsedTime();
-  currentRY += (targetRY - currentRY) * 0.06;
-  currentRX += (targetRX - currentRX) * 0.06;
-  if(model){
-    model.rotation.y = currentRY + userRY + t * 0.08;
-    model.rotation.x = currentRX + userRX;
-    model.position.y = Math.sin(t * 0.8) * 0.1;
+  if(!window.matchMedia('(hover: none)').matches){
+    window.addEventListener('mousemove', (e)=>{
+      if(isDragging) return;
+      const rect = canvas.getBoundingClientRect();
+      targetRY = ((e.clientX - (rect.left + rect.width/2)) / (rect.width/2)) * 0.45;
+      targetRX = ((e.clientY - (rect.top + rect.height/2)) / (rect.height/2)) * 0.3;
+      targetRY = Math.max(-0.6, Math.min(0.6, targetRY)); targetRX = Math.max(-0.4, Math.min(0.4, targetRX));
+    });
   }
-  fill.position.x = -4 + Math.sin(t*0.5)*2;
-  rim.position.x = Math.cos(t*0.4)*3;
-  renderer.render(scene, camera);
+  canvas.addEventListener('pointerdown', (e)=>{ isDragging = true; lastX = e.clientX; lastY = e.clientY; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener('pointermove', (e)=>{
+    if(!isDragging) return;
+    userRY += (e.clientX - lastX) * 0.01;
+    userRX = Math.max(-0.8, Math.min(0.8, userRX + (e.clientY - lastY) * 0.01));
+    lastX = e.clientX; lastY = e.clientY;
+  });
+  canvas.addEventListener('pointerup', ()=>{ isDragging=false; });
+  canvas.addEventListener('pointercancel', ()=>{ isDragging=false; });
+
+  const clock = new THREE.Clock();
+  (function animate(){
+    requestAnimationFrame(animate);
+    if(canvas.hidden) return;
+    const t = clock.getElapsedTime();
+    currentRY += (targetRY - currentRY) * 0.06;
+    currentRX += (targetRX - currentRX) * 0.06;
+    if(model){
+      model.rotation.y = currentRY + userRY + t * 0.08;
+      model.rotation.x = currentRX + userRX;
+      model.position.y = Math.sin(t * 0.8) * 0.1;
+    }
+    fill.position.x = -4 + Math.sin(t*0.5)*2;
+    rim.position.x = Math.cos(t*0.4)*3;
+    renderer.render(scene, camera);
+  })();
 }
-animate();
 </script>
 
 <script>
+// Nav: mobile menu + shadow on scroll
+(function(){
+  var nav=document.getElementById('nav'), tg=document.getElementById('navtg');
+  function close(){nav.classList.remove('open');tg.setAttribute('aria-expanded','false');}
+  tg.addEventListener('click',function(){var o=nav.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false');});
+  document.querySelectorAll('#navlks a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target))close();});
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>30);},{passive:true});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+
+// Hero: photo ⇄ 3D toggle, and a gentle tilt on the photo orb
+(function(){
+  var btn=document.getElementById('v3d'), orb=document.getElementById('orb'), cv=document.getElementById('canvas3d'), ld=document.getElementById('loader3d'), on=false, loaded=false;
+  btn.addEventListener('click',function(){
+    on=!on; orb.hidden=on; cv.hidden=!on; btn.setAttribute('aria-pressed',on?'true':'false');
+    btn.textContent=on?'← Back to the photo  ·  drag to rotate':'↻ Spin it in 3D';
+    if(on){ if(!loaded){ld.hidden=false;loaded=true;} window.start3D().then(function(){ if(window.__resize3D) window.__resize3D(); }); }
+    else ld.hidden=true;
+  });
+  if(window.matchMedia('(hover: none)').matches||window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var wrap=document.getElementById('orbwrap');
+  window.addEventListener('mousemove',function(e){
+    var r=wrap.getBoundingClientRect();
+    var x=Math.max(-1,Math.min(1,(e.clientX-(r.left+r.width/2))/(innerWidth/2)));
+    var y=Math.max(-1,Math.min(1,(e.clientY-(r.top+r.height/2))/(innerHeight/2)));
+    orb.style.setProperty('--ry',(x*9)+'deg'); orb.style.setProperty('--rx',(-y*7)+'deg');
+  },{passive:true});
+})();
+
+// Scroll reveal
+(function(){
+  var els=document.querySelectorAll('.pcard,.hofc,.fcard,.gc,.rcd,.ctas,#rest h2,#rest .ey,.lead');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=((i%3)*90)+'ms';io.observe(el);});
+})();
+
+// Bubbles rising through every band
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.band').forEach(function(b,bi){
+    var n=b.classList.contains('b-deep')?12:6;
+    for(var i=0;i<n;i++){
+      var d=document.createElement('div'),sz=8+((i*37+bi*13)%26);
+      d.className='bub2';
+      d.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+((i*53+bi*29)%96+2)+'%;top:'+((i*41+bi*17)%88+6)+'%;animation-duration:'+(6+(i*7)%6)+'s;animation-delay:-'+((i*13)%9)+'s';
+      b.insertBefore(d,b.firstChild);
+    }
+  });
+})();
+
 // Gallery filter
 function filterGal(cat, btn){
   document.querySelectorAll('.gtb').forEach(t=>t.classList.remove('act'));
@@ -804,7 +1007,7 @@ const LEGAL = {
     <h4>Your rights</h4>
     <p>Since we don't collect personal data, there is nothing to access, rectify or delete on our side. For Amazon purchases, manage your data through your Amazon account.</p>`,
   affiliate: `<h3>Affiliate Disclosure</h3>
-    <p>FrutigerAeroStore may participate in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn fees by linking to Amazon.</p>
+    <p>FrutigerAeroStore participates in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn fees by linking to Amazon.</p>
     <p>This means that, at no additional cost to you, we may earn a small commission if you buy through our links. This never changes the price you pay.</p>
     <p>Brand names shown in the "Hall of Fame" section (Fluvi, Care Bears, Россия Airlines, Kinder Surprise) are trademarks of their respective owners and are displayed purely for historical and illustrative purposes. FrutigerAeroStore is not affiliated with, endorsed by, or sponsored by these brands.</p>`
 };
