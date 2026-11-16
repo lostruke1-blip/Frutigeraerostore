@@ -349,6 +349,7 @@ nav.open .navtg span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 #pmini:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,140,200,.28)}
 #v3d{background:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.95);color:#005577;font-size:12px;font-weight:800;padding:8px 16px;border-radius:999px;cursor:pointer;backdrop-filter:blur(8px);letter-spacing:.3px;transition:background .2s;z-index:8}
 #v3d:hover{background:rgba(255,255,255,.95)}
+#v3d[hidden]{display:none}
 .pi{height:280px}
 .hofc{align-items:stretch}
 .hofi{height:auto;min-height:220px;align-self:stretch}
@@ -492,7 +493,7 @@ h2{font-size:clamp(26px,3.4vw,38px)}
         <div class="pn">Clown Fish Aqua Mouse</div>
         <div class="pp">See today's price on Amazon ↗</div>
       </a>
-      <button id="v3d" type="button" aria-pressed="false">↻ Spin it in 3D</button>
+      <button id="v3d" type="button" aria-pressed="false">Loading 3D…</button>
     </div>
   </div>
 
@@ -849,12 +850,13 @@ async function init3D(){
     });
     const pivot = new THREE.Group(); pivot.add(model); scene.add(pivot); model = pivot;
     loaderEl.hidden = true;
+    if(window.__on3DReady) window.__on3DReady();
   }, (xhr)=>{
     if(xhr.total) loaderEl.querySelector('.ltxt').textContent = 'Loading 3D model… ' + Math.round((xhr.loaded/xhr.total)*100) + '%';
   }, (err)=>{
     console.error('3D load error', err);
     loaderEl.querySelector('.ltxt').textContent = '3D unavailable';
-    loaderEl.querySelector('.spin').style.display = 'none';
+    document.getElementById('v3d').hidden = true;
   });
 
   if(!window.matchMedia('(hover: none)').matches){
@@ -909,13 +911,17 @@ async function init3D(){
 
 // Hero: photo ⇄ 3D toggle, and a gentle tilt on the photo orb
 (function(){
-  var btn=document.getElementById('v3d'), orb=document.getElementById('orb'), cv=document.getElementById('canvas3d'), ld=document.getElementById('loader3d'), on=false, loaded=false;
+  var btn=document.getElementById('v3d'), orb=document.getElementById('orb'), cv=document.getElementById('canvas3d'), ld=document.getElementById('loader3d'), ready=false, wantPhoto=false;
+  function show3D(){ orb.hidden=true; cv.hidden=false; btn.setAttribute('aria-pressed','true'); btn.textContent='↔ Drag to rotate  ·  see the real photo'; if(window.__resize3D) window.__resize3D(); }
+  function showPhoto(){ orb.hidden=false; cv.hidden=true; btn.setAttribute('aria-pressed','false'); btn.textContent='↻ Back to 3D'; }
+  // The photo shows instantly; the spinning 3D model takes over as soon as it has loaded.
+  window.__on3DReady=function(){ ready=true; if(!wantPhoto) show3D(); };
+  btn.textContent='Loading 3D…';
   btn.addEventListener('click',function(){
-    on=!on; orb.hidden=on; cv.hidden=!on; btn.setAttribute('aria-pressed',on?'true':'false');
-    btn.textContent=on?'← Back to the photo  ·  drag to rotate':'↻ Spin it in 3D';
-    if(on){ if(!loaded){ld.hidden=false;loaded=true;} window.start3D().then(function(){ if(window.__resize3D) window.__resize3D(); }); }
-    else ld.hidden=true;
+    if(!ready) return;
+    wantPhoto=!cv.hidden; if(wantPhoto) showPhoto(); else show3D();
   });
+  window.addEventListener('load',function(){ window.start3D().catch(function(){ btn.hidden=true; }); });
   if(window.matchMedia('(hover: none)').matches||window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var wrap=document.getElementById('orbwrap');
   window.addEventListener('mousemove',function(e){
